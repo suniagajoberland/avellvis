@@ -3,15 +3,15 @@
 
 /* Variables de Diseño System (Colores HSL/HEX de la imagen original) */
 :root {
-  --color-bg-primary: #faf6ef;       /* Crema Vainilla del fondo general */
-  --color-bg-secondary: #efe4d5;     /* Arena Cálido de las cajas de información */
-  --color-text-primary: #382a20;     /* Café Oscuro/Cacao para el texto principal */
-  --color-text-secondary: #6b5a4e;   /* Café Atenuado para descripciones y subtítulos */
-  --color-accent: #b86443;           /* Terracota/Óxido de los detalles de la marca */
-  --color-accent-hover: #9e4f30;     /* Terracota Oscuro para hovers */
-  --color-earth-dark: #5a4538;       /* Marrón Tierra de soporte */
-  --color-white: #ffffff;            /* Blanco puro para fondos de tarjeta contrastados */
-  --color-glass: rgba(250, 246, 239, 0.85); /* Navbar transparente con desenfoque */
+  --color-bg-primary: #F9F6F0;       /* Fondo Principal (Crema Suave) */
+  --color-bg-secondary: #efe5d9;     /* Fondo Secundario */
+  --color-text-primary: #4A3525;     /* Tono Secundario (Marrón Oscuro) - textos, títulos, menús */
+  --color-text-secondary: #745b49;   /* Café Atenuado para descripciones y subtítulos */
+  --color-accent: #A36F52;           /* Tono de Acento (Marrón Avellana / Terracota) - botones, headers, activos */
+  --color-accent-hover: #8c5a3d;     /* Acento Hover */
+  --color-earth-dark: #4A3525;       /* Marrón Oscuro de soporte */
+  --color-white: #FFFFFF;            /* Fondo de Tarjetas / Contenedores */
+  --color-glass: rgba(249, 246, 240, 0.85); /* Navbar transparente con desenfoque */
   
   --font-display: 'Playfair Display', Georgia, serif;
   --font-sans: 'Outfit', sans-serif;
@@ -387,34 +387,7 @@ img {
   border-color: rgba(173, 82, 51, 0.15);
 }
 
-.product-badge-3d {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(173, 82, 51, 0.3);
-  padding: 0.4rem 0.8rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.product-badge-3d svg {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
-}
+/* Estilos de tarjeta simplificados sin insignias 3D */
 
 .product-image-container {
   position: relative;
@@ -435,35 +408,7 @@ img {
   transform: scale(1.06);
 }
 
-/* Botón flotante para ver en 3D en la imagen */
-.btn-view-3d-overlay {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translate(-50%, 20px);
-  opacity: 0;
-  z-index: 5;
-  background-color: var(--color-text-primary);
-  color: var(--color-white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: var(--shadow-md);
-}
-
-.product-card:hover .btn-view-3d-overlay {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-
-.btn-view-3d-overlay:hover {
-  background-color: var(--color-accent);
-}
+/* Imagen de producto adaptada sin overlay de 3D */
 
 .product-info {
   padding: 1.75rem;
@@ -555,148 +500,7 @@ img {
   transform: translateY(-2px);
 }
 
-/* Modal 3D Lightbox */
-.lightbox-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2000;
-  background-color: rgba(45, 37, 34, 0.7);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.lightbox-modal.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal-card {
-  background-color: var(--color-bg-primary);
-  width: 90%;
-  max-width: 850px;
-  height: 80vh;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  transform: scale(0.9);
-  transition: var(--transition-smooth);
-}
-
-.lightbox-modal.active .modal-card {
-  transform: scale(1);
-}
-
-.modal-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  z-index: 100;
-  background: var(--color-white);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-sm);
-  color: var(--color-text-primary);
-}
-
-.modal-close:hover {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  transform: rotate(90deg);
-}
-
-.modal-viewer-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, var(--color-white) 0%, var(--color-bg-secondary) 100%);
-}
-
-/* Google Model Viewer Styling */
-model-viewer {
-  width: 100%;
-  height: 100%;
-  --poster-color: transparent;
-  outline: none;
-}
-
-.viewer-instructions {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(45, 37, 34, 0.75);
-  color: var(--color-white);
-  padding: 0.5rem 1rem;
-  border-radius: 30px;
-  font-size: 0.75rem;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.modal-details {
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--color-white);
-  border-left: 1px solid rgba(45, 37, 34, 0.05);
-}
-
-.modal-details .product-category {
-  margin-bottom: 0.5rem;
-}
-
-.modal-details .product-title {
-  font-size: 2.2rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.modal-details .product-price {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.modal-description {
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 2rem;
-}
-
-.modal-specs {
-  margin-bottom: 2rem;
-  font-size: 0.85rem;
-}
-
-.modal-specs-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(45, 37, 34, 0.05);
-}
-
-.modal-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
+/* Detalle del producto e interacciones directas */
 
 /* Secciones Informativas (Inspirado en la imagen) */
 .info-section {
@@ -1303,33 +1107,4 @@ footer {
   }
 }
 
-/* Model Viewer Progress Bar Styling */
-.progress-bar {
-  display: block;
-  width: 40%;
-  height: 6px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(56, 42, 32, 0.15);
-  border-radius: 10px;
-  overflow: hidden;
-  z-index: 10;
-}
-
-.update-bar {
-  background-color: var(--color-accent);
-  width: 0%;
-  height: 100%;
-  transition: width 0.3s ease;
-}
-
-/* Ocultar barra al terminar de cargar */
-model-viewer:not([loading="lazy"]) .progress-bar {
-  transition: opacity 0.3s ease;
-}
-model-viewer.ready .progress-bar {
-  opacity: 0;
-  pointer-events: none;
-}
+/* Estilos de barra de progreso eliminados */

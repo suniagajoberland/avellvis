@@ -3,19 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avellvis Collection | Moda Exclusiva & Diseño 3D</title>
-  <meta name="description" content="Descubre la colección exclusiva de Avellvis. Explora nuestras prendas en 3D interactivo y realiza tu pedido directo vía WhatsApp. Diseños hechos con amor.">
+  <title>Avellvis Collection | Moda Exclusiva & Estilo Premium</title>
+  <meta name="description" content="Descubre la colección exclusiva de Avellvis. Explora nuestras prendas elegantes y realiza tu pedido directo vía WhatsApp. Diseños hechos con amor.">
   
   <!-- Estilos CSS Personalizados -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Pre-carga en caché de los Modelos 3D (.glb) para velocidad instantánea -->
-  <link rel="preload" href="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Corset/glTF-Binary/Corset.glb" as="fetch" crossorigin="anonymous">
-  <link rel="preload" href="https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb" as="fetch" crossorigin="anonymous">
-  <link rel="preload" href="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Handbag/glTF-Binary/Handbag.glb" as="fetch" crossorigin="anonymous">
-
-  <!-- Carga del visor de Modelos 3D de Google (model-viewer) -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -67,7 +59,7 @@
     <div class="hero-content">
       <span class="hero-subtitle">Nueva Colección de Temporada</span>
       <h1 class="hero-title">Estilo único en tonos <em>cálidos</em></h1>
-      <a href="#catalogo" class="hero-btn">Explorar Catálogo 3D</a>
+      <a href="#catalogo" class="hero-btn">Explorar Catálogo</a>
     </div>
   </header>
 
@@ -75,8 +67,8 @@
   <section class="section-padding catalog-section" id="catalogo">
     <div class="section-header">
       <span class="section-tag">Colección Exclusiva</span>
-      <h2 class="section-title">Productos en 3D</h2>
-      <p style="color: var(--color-text-secondary); margin-top: 1rem;">Haz clic sobre "Girar en 3D" en cualquier prenda para interactuar con el modelo en tres dimensiones, revisar detalles e iniciar tu consulta.</p>
+      <h2 class="section-title">Nuestras Prendas</h2>
+      <p style="color: var(--color-text-secondary); margin-top: 1rem;">Explora nuestra última colección, agrega tus prendas al carrito y realiza tus consultas de manera directa y personalizada.</p>
     </div>
     
     <!-- Grid de productos dinámico por JS -->
@@ -261,70 +253,7 @@
     </div>
   </div>
 
-  <!-- Modal Lightbox para Visor 3D Interactivo -->
-  <div class="lightbox-modal" id="lightbox-modal">
-    <div class="modal-card">
-      <button class="modal-close" id="modal-close" aria-label="Cerrar modal">&times;</button>
-      
-      <!-- Contenedor del Visor 3D -->
-      <div class="modal-viewer-container">
-        <!-- Visor model-viewer de Google -->
-        <model-viewer id="modal-viewer"
-                      camera-controls
-                      auto-rotate
-                      loading="eager"
-                      reveal="auto"
-                      shadow-intensity="1"
-                      environment-image="neutral"
-                      exposure="1.0"
-                      touch-action="pan-y">
-          <!-- Barra de progreso de carga -->
-          <div class="progress-bar" slot="progress-bar">
-            <div class="update-bar" id="update-bar"></div>
-          </div>
-          <!-- Instrucción visual superpuesta -->
-          <div class="viewer-instructions">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M15 18H9.5a3.5 3.5 0 0 1-2.5-6.04V7.5a3.5 3.5 0 1 1 7 0v4.46a3.5 3.5 0 0 1-2.5 6.04z"></path>
-            </svg>
-            Mantén presionado y arrastra para girar
-          </div>
-        </model-viewer>
-      </div>
-
-      <!-- Detalles del Producto en el Modal -->
-      <div class="modal-details">
-        <span class="product-category" id="modal-category">Categoría</span>
-        <h3 class="product-title" id="modal-title">Título del Producto</h3>
-        <p class="product-price" id="modal-price">$0.00</p>
-        <p style="font-size: 0.8rem; color: var(--color-accent); margin-top: -0.75rem; margin-bottom: 1.5rem;" id="modal-price-bs">0.00 BS</p>
-        
-        <p class="modal-description" id="modal-description">Descripción detallada del producto.</p>
-        
-        <!-- Ficha Técnica -->
-        <div class="modal-specs" id="modal-specs-container">
-          <!-- Especificaciones generadas dinámicamente -->
-        </div>
-
-        <div class="modal-actions">
-          <button class="btn-add-cart" id="modal-btn-add-cart">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            Agregar al Carrito
-          </button>
-          <button class="btn-inquire" id="modal-btn-inquire" style="border-color: var(--color-accent); color: var(--color-accent);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-            Consultar por WhatsApp
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Modal de consulta rápida eliminado (se usa interacción directa o consulta directa de WhatsApp en tarjeta) -->
 
   <!-- Pie de Página créditos -->
   <footer>
