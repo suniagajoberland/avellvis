@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avellvis Collection | Moda Exclusiva & Diseño 3D</title>
+  <meta name="description" content="Descubre la colección exclusiva de Avellvis. Explora nuestras prendas en 3D interactivo y realiza tu pedido directo vía WhatsApp. Diseños hechos con amor.">
+  
+  <!-- Estilos CSS Personalizados -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Pre-carga en caché de los Modelos 3D (.glb) para velocidad instantánea -->
+  <link rel="preload" href="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Corset/glTF-Binary/Corset.glb" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Handbag/glTF-Binary/Handbag.glb" as="fetch" crossorigin="anonymous">
+
+  <!-- Carga del visor de Modelos 3D de Google (model-viewer) -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- Navegación Sticky Glassmorphic -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      AVELLVIS
+      <span>COLLECTION</span>
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#info">Información</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Botón del Carrito de Compras -->
+      <button class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+
+      <!-- Toggle Menú Móvil -->
+      <button class="menu-mobile-toggle" id="menu-mobile-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Sección de Cabecera (Inicio) con Video en Bucle -->
+  <header class="hero" id="inicio">
+    <div class="hero-video-container">
+      <!-- Video de fondo estético beige de modelaje de moda -->
+      <video autoplay muted loop playsinline id="hero-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-modeling-a-stylish-beige-suit-in-a-studio-41764-large.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <span class="hero-subtitle">Nueva Colección de Temporada</span>
+      <h1 class="hero-title">Estilo único en tonos <em>cálidos</em></h1>
+      <a href="#catalogo" class="hero-btn">Explorar Catálogo 3D</a>
+    </div>
+  </header>
+
+  <!-- Sección Catálogo de Productos -->
+  <section class="section-padding catalog-section" id="catalogo">
+    <div class="section-header">
+      <span class="section-tag">Colección Exclusiva</span>
+      <h2 class="section-title">Productos en 3D</h2>
+      <p style="color: var(--color-text-secondary); margin-top: 1rem;">Haz clic sobre "Girar en 3D" en cualquier prenda para interactuar con el modelo en tres dimensiones, revisar detalles e iniciar tu consulta.</p>
+    </div>
+    
+    <!-- Grid de productos dinámico por JS -->
+    <div class="products-grid" id="products-grid">
+      <!-- Los productos se cargarán dinámicamente aquí -->
+    </div>
+  </section>
+
+  <!-- Sección de Información y Políticas (Inspirado en la imagen de referencia) -->
+  <section class="section-padding info-section" id="info">
+    <div class="section-header">
+      <span class="section-tag">Cómo comprar</span>
+      <h2 class="section-title">Información Importante</h2>
+    </div>
+
+    <div class="info-grid">
+      <!-- Tarjeta 1: Guía de Compra -->
+      <div class="info-card">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="2" y1="10" x2="22" y2="10"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="10" y1="23" x2="14" y2="23"></line>
+          </svg>
+        </div>
+        <h3 class="info-title">1. ¿Cómo Comprar?</h3>
+        <ul class="info-list">
+          <li>Agrega tus productos favoritos al carrito en esta página.</li>
+          <li>Revisa tu orden y presiona "Finalizar Compra" para compilar tu pedido.</li>
+          <li>Serás redirigido a WhatsApp para confirmar disponibilidad inmediata de tallas.</li>
+          <li>Realiza tu pago vía Pago Móvil, Transferencia o Binance (tasa BCV del día).</li>
+        </ul>
+      </div>
+
+      <!-- Tarjeta 2: Garantías -->
+      <div class="info-card">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3 class="info-title">2. Garantías & Horarios</h3>
+        <ul class="info-list">
+          <li>Cambios de talla o modelo dentro de las 24 horas de haber recibido tu pedido.</li>
+          <li>La prenda debe estar sin uso, con etiquetas y en empaque original.</li>
+          <li>Atención de Lunes a Viernes de 9:00 AM a 4:00 PM.</li>
+        </ul>
+        <span class="info-highlight">No realizamos devoluciones de dinero</span>
+      </div>
+
+      <!-- Tarjeta 3: Envío / Delivery -->
+      <div class="info-card">
+        <div class="info-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <h3 class="info-title">3. Forma de Entrega</h3>
+        <ul class="info-list">
+          <li>Servicio de delivery a domicilio en toda Caracas.</li>
+          <li>Entregas programadas en horario de mañana: 9:00 AM a 12:00 PM.</li>
+          <li>Costos accesibles desde $2 en adelante para zonas céntricas de la ciudad.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto y Redes -->
+  <section class="section-padding contact-section" id="contacto">
+    <div class="contact-container">
+      <div class="contact-info-col">
+        <h3>Escríbenos y conéctate con nosotros</h3>
+        <p>¿Tienes dudas con respecto a las tallas o materiales? Completa el formulario de contacto o búscanos en nuestras plataformas sociales para atención en vivo.</p>
+        
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <h4>Email de atención</h4>
+              <p>soporte@avellvis.com</p>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <h4>Ubicación</h4>
+              <p>Caracas, Venezuela</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de Redes Sociales (handles de la imagen) -->
+        <div class="social-links">
+          <a href="https://instagram.com/avellvis.collection" target="_blank" class="social-btn" aria-label="Instagram de Avellvis">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://tiktok.com/@avellvis.collection" target="_blank" class="social-btn" aria-label="TikTok de Avellvis">
+            <!-- Icono simple de TikTok -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-col">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Nombre Completo</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="Ej: Valentina Pérez" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Correo Electrónico</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="Ej: valentina@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone" class="form-label">Número de Teléfono</label>
+            <input type="tel" id="contact-phone" class="form-input" placeholder="Ej: 04241234567" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Mensaje o Consulta</label>
+            <textarea id="contact-message" class="form-input" placeholder="Describe brevemente tus dudas aquí..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Consulta</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrito de Compras Lateral (Drawer Overlay y Panel) -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Tu Pedido</h3>
+      <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    
+    <!-- Items cargados dinámicamente -->
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Los artículos del carrito aparecerán aquí -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal USD:</span>
+        <span class="cart-summary-total" id="cart-total-val">$0.00</span>
+      </div>
+      <div class="cart-summary-row" style="margin-bottom: 1.5rem;">
+        <span>Total Estimado BS:</span>
+        <span class="cart-summary-total-val" id="cart-total-bs">0.00 BS</span>
+      </div>
+      <div class="cart-shipping-notice">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        Entregas a coordinar en Caracas (costo de delivery adicional).
+      </div>
+      <button class="btn-checkout" id="btn-checkout">
+        Enviar pedido a WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Lightbox para Visor 3D Interactivo -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Cerrar modal">&times;</button>
+      
+      <!-- Contenedor del Visor 3D -->
+      <div class="modal-viewer-container">
+        <!-- Visor model-viewer de Google -->
+        <model-viewer id="modal-viewer"
+                      camera-controls
+                      auto-rotate
+                      loading="eager"
+                      reveal="auto"
+                      shadow-intensity="1"
+                      environment-image="neutral"
+                      exposure="1.0"
+                      touch-action="pan-y">
+          <!-- Barra de progreso de carga -->
+          <div class="progress-bar" slot="progress-bar">
+            <div class="update-bar" id="update-bar"></div>
+          </div>
+          <!-- Instrucción visual superpuesta -->
+          <div class="viewer-instructions">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 18H9.5a3.5 3.5 0 0 1-2.5-6.04V7.5a3.5 3.5 0 1 1 7 0v4.46a3.5 3.5 0 0 1-2.5 6.04z"></path>
+            </svg>
+            Mantén presionado y arrastra para girar
+          </div>
+        </model-viewer>
+      </div>
+
+      <!-- Detalles del Producto en el Modal -->
+      <div class="modal-details">
+        <span class="product-category" id="modal-category">Categoría</span>
+        <h3 class="product-title" id="modal-title">Título del Producto</h3>
+        <p class="product-price" id="modal-price">$0.00</p>
+        <p style="font-size: 0.8rem; color: var(--color-accent); margin-top: -0.75rem; margin-bottom: 1.5rem;" id="modal-price-bs">0.00 BS</p>
+        
+        <p class="modal-description" id="modal-description">Descripción detallada del producto.</p>
+        
+        <!-- Ficha Técnica -->
+        <div class="modal-specs" id="modal-specs-container">
+          <!-- Especificaciones generadas dinámicamente -->
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn-add-cart" id="modal-btn-add-cart">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Agregar al Carrito
+          </button>
+          <button class="btn-inquire" id="modal-btn-inquire" style="border-color: var(--color-accent); color: var(--color-accent);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            Consultar por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de Página créditos -->
+  <footer>
+    <div class="footer-logo">
+      AVELLVIS
+      <span>COLLECTION</span>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#info">Información</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="footer-divider"></div>
+    <p class="footer-copy">Hecho con Amor por Avellvis &copy; 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Lógica Javascript -->
+  <script src="app.js"></script>
+</body>
+</html>
