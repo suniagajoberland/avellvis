@@ -6,12 +6,10 @@
   <title>Avellvis Collection | Moda Exclusiva & Estilo Premium</title>
   <meta name="description" content="Descubre la colección exclusiva de Avellvis. Explora nuestras prendas elegantes y realiza tu pedido directo vía WhatsApp. Diseños hechos con amor.">
   
-  <!-- Estilos CSS Personalizados -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navegación Sticky Glassmorphic -->
   <nav class="navbar" id="navbar">
     <div class="nav-brand">
       AVELLVIS
@@ -26,7 +24,6 @@
     </ul>
 
     <div class="nav-actions">
-      <!-- Botón del Carrito de Compras -->
       <button class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
@@ -36,7 +33,6 @@
         <span class="cart-count" id="cart-count">0</span>
       </button>
 
-      <!-- Toggle Menú Móvil -->
       <button class="menu-mobile-toggle" id="menu-mobile-toggle" aria-label="Abrir menú">
         <span></span>
         <span></span>
@@ -45,10 +41,8 @@
     </div>
   </nav>
 
-  <!-- Sección de Cabecera (Inicio) con Video en Bucle -->
   <header class="hero" id="inicio">
     <div class="hero-video-container">
-      <!-- Video de fondo estético beige de modelaje de moda -->
       <video autoplay muted loop playsinline id="hero-video">
         <source src="https://cdn.pixabay.com/video/2021/05/28/75550-556034413_large.mp4" type="video/mp4">
         Tu navegador no soporta el formato de video.
@@ -63,7 +57,6 @@
     </div>
   </header>
 
-  <!-- Sección Catálogo de Productos -->
   <section class="section-padding catalog-section" id="catalogo">
     <div class="section-header">
       <span class="section-tag">Colección Exclusiva</span>
@@ -71,13 +64,10 @@
       <p style="color: var(--color-text-secondary); margin-top: 1rem;">Explora nuestra última colección, agrega tus prendas al carrito y realiza tus consultas de manera directa y personalizada.</p>
     </div>
     
-    <!-- Grid de productos dinámico por JS -->
     <div class="products-grid" id="products-grid">
-      <!-- Los productos se cargarán dinámicamente aquí -->
-    </div>
+      </div>
   </section>
 
-  <!-- Sección de Información y Políticas (Inspirado en la imagen de referencia) -->
   <section class="section-padding info-section" id="info">
     <div class="section-header">
       <span class="section-tag">Cómo comprar</span>
@@ -85,7 +75,6 @@
     </div>
 
     <div class="info-grid">
-      <!-- Tarjeta 1: Guía de Compra -->
       <div class="info-card">
         <div class="info-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -104,7 +93,6 @@
         </ul>
       </div>
 
-      <!-- Tarjeta 2: Garantías -->
       <div class="info-card">
         <div class="info-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -120,7 +108,6 @@
         <span class="info-highlight">No realizamos devoluciones de dinero</span>
       </div>
 
-      <!-- Tarjeta 3: Envío / Delivery -->
       <div class="info-card">
         <div class="info-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -140,7 +127,6 @@
     </div>
   </section>
 
-  <!-- Sección Contacto y Redes -->
   <section class="section-padding contact-section" id="contacto">
     <div class="contact-container">
       <div class="contact-info-col">
@@ -175,7 +161,6 @@
           </div>
         </div>
 
-        <!-- Botones de Redes Sociales (handles de la imagen) -->
         <div class="social-links">
           <a href="https://instagram.com/avellvis.collection" target="_blank" class="social-btn" aria-label="Instagram de Avellvis">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -185,7 +170,6 @@
             </svg>
           </a>
           <a href="https://tiktok.com/@avellvis.collection" target="_blank" class="social-btn" aria-label="TikTok de Avellvis">
-            <!-- Icono simple de TikTok -->
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
             </svg>
@@ -217,7 +201,6 @@
     </div>
   </section>
 
-  <!-- Carrito de Compras Lateral (Drawer Overlay y Panel) -->
   <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
   <div class="cart-drawer" id="cart-drawer">
     <div class="cart-drawer-header">
@@ -225,10 +208,8 @@
       <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Cerrar carrito">&times;</button>
     </div>
     
-    <!-- Items cargados dinámicamente -->
     <div class="cart-items-container" id="cart-items-container">
-      <!-- Los artículos del carrito aparecerán aquí -->
-    </div>
+      </div>
 
     <div class="cart-drawer-footer">
       <div class="cart-summary-row">
@@ -253,9 +234,6 @@
     </div>
   </div>
 
-  <!-- Modal de consulta rápida eliminado (se usa interacción directa o consulta directa de WhatsApp en tarjeta) -->
-
-  <!-- Pie de Página créditos -->
   <footer>
     <div class="footer-logo">
       AVELLVIS
@@ -271,7 +249,96 @@
     <p class="footer-copy">Hecho con Amor por Avellvis &copy; 2026. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Lógica Javascript -->
   <script src="app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnCheckout = document.getElementById('btn-checkout');
+      
+      if (btnCheckout) {
+        btnCheckout.addEventListener('click', () => {
+          const cartItemsContainer = document.getElementById('cart-items-container');
+          // Se asume que en app.js cada producto agregado tiene una clase identificadora (ej: .cart-item)
+          const items = cartItemsContainer.querySelectorAll('.cart-item, div[data-title], .item-cart'); 
+          
+          let totalUsd = document.getElementById('cart-total-val')?.textContent || '$0.00';
+          let totalBs = document.getElementById('cart-total-bs')?.textContent || '0.00 BS';
+          
+          let mensaje = `🛍️ *¡Hola Avellvis Collection!* Realizo mi pedido desde la web:\n\n`;
+          let tieneProductos = false;
+
+          // Si tu app.js almacena un array global o lees el DOM:
+          if (items.length > 0) {
+            items.forEach((item, index) => {
+              // Intenta extraer texto limpio de los elementos correspondientes
+              const nombre = item.querySelector('.cart-item-title, .product-title, h4')?.textContent.trim() || `Producto ${index + 1}`;
+              const cantidad = item.querySelector('.cart-item-quantity, .qty, span')?.textContent.trim() || '1';
+              const precio = item.querySelector('.cart-item-price, .price')?.textContent.trim() || '';
+              
+              mensaje += `🔹 *${nombre}* (Cant: ${cantidad}) ${precio ? `- ${precio}` : ''}\n`;
+              tieneProductos = true;
+            });
+          } else {
+            // Alternativa por si el DOM usa selectores planos o texto directo en el contenedor
+            const textoPlano = cartItemsContainer.textContent.trim();
+            if (textoPlano && !textoPlano.includes('vacío')) {
+              mensaje += `${textoPlano}\n`;
+              tieneProductos = true;
+            }
+          }
+
+          if (!tieneProductos) {
+            alert('El carrito está vacío. Agrega prendas de la colección antes de continuar.');
+            return;
+          }
+
+          mensaje += `\n💵 *Subtotal USD:* ${totalUsd}`;
+          mensaje += `\n🇻🇪 *Total Estimado:* ${totalBs}`;
+          mensaje += `\n\n📍 *Ubicación:* Caracas, Venezuela.`;
+          mensaje += `\n⚙️ _Por favor, confírmame la disponibilidad de las piezas._`;
+
+          // Formateo del número telefónico de Venezuela de 04226382165 a formato internacional +584226382165
+          const numeroWhatsApp = "584226382165";
+          const urlBase = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+
+          // Abre la pestaña de WhatsApp
+          window.open(urlBase, '_blank');
+
+          // --- Procesar la limpieza de datos solicitada ---
+          
+          // 1. Limpiar Formulario de Contacto
+          const contactoForm = document.getElementById('contact-form');
+          if (contactoForm) contactoForm.reset();
+
+          // 2. Intentar vaciar el estado del carrito en tu app.js si existe la función global
+          if (typeof limpiarCarritoGlobal === 'function') {
+            limpiarCarritoGlobal();
+          } else {
+            // Limpieza manual de respaldo sobre el DOM de la interfaz
+            if (cartItemsContainer) cartItemsContainer.innerHTML = '';
+            
+            const cartCount = document.getElementById('cart-count');
+            if (cartCount) cartCount.textContent = '0';
+            
+            const totalVal = document.getElementById('cart-total-val');
+            if (totalVal) totalVal.textContent = '$0.00';
+            
+            const totalBsVal = document.getElementById('cart-total-bs');
+            if (totalBsVal) totalBsVal.textContent = '0.00 BS';
+
+            // Remover del localStorage si app.js los guarda ahí
+            localStorage.removeItem('cart');
+            localStorage.removeItem('carrito');
+          }
+
+          // Cierra el drawer automáticamente tras el flujo
+          const overlay = document.getElementById('cart-drawer-overlay');
+          const drawer = document.getElementById('cart-drawer');
+          if (drawer) drawer.classList.remove('active', 'open');
+          if (overlay) overlay.classList.remove('active', 'open');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
