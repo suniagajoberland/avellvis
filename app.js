@@ -2,50 +2,117 @@
 const PRODUCTS = [
   {
     id: 1,
-    title: "Corset Terracota",
-    category: "Tops & Crop Tops",
+    title: "ANDREA",
+    category: "body",
     price: 29.99,
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop",
-    modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Corset/glTF-Binary/Corset.glb",
-    description: "Corset entallado elegante en tonalidad terracota cálida. Confeccionado con costuras reforzadas que estilizan la silueta, ideal para combinar con pantalones de tiro alto o blazers.",
-    specs: {
-      Material: "Lino & Poliéster Premium",
-      Tallas: "S, M, L",
-      Origen: "Hecho a mano en Venezuela"
-    }
+    image: "img/andrea.png",
   },
   {
     id: 2,
-    title: "Zapatillas Urban Velvet",
-    category: "Calzado",
+    title: "BICOLOR",
+    category: "body",
     price: 49.99,
-    image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop",
-    modelUrl: "https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb",
-    description: "Zapatillas deportivas de diseño con acabado aterciopelado. Cuentan con una suela acolchada de alto confort, detalles minimalistas y cordones de algodón orgánico.",
-    specs: {
-      Material: "Terciopelo Sintético & Goma",
-      Tallas: "36 a 40",
-      Suela: "Antirresbalante Ergonómica"
-    }
+    image: "img/bicolor.jpg",
   },
   {
     id: 3,
-    title: "Bolso de Mano Minimalista",
-    category: "Accesorios",
+    title: "BODY BICOLOR",
+    category: "BODY",
     price: 34.99,
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=600&auto=format&fit=crop",
-    modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Handbag/glTF-Binary/Handbag.glb",
-    description: "Bolso estructurado de líneas limpias y herrajes metálicos discretos. El complemento perfecto para un look de oficina o una salida casual de tarde.",
-    specs: {
-      Material: "Cuero Vegano Ecológico",
-      Medidas: "25cm x 18cm x 10cm",
-      Compartimientos: "3 internos"
-    }
-  }
+    image: "img/body bicolor.jpg",
+  },
+  {
+    id: 4,
+    title: "CLASICO",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/body clasico.jpg",
+  },
+  {
+    id: 5,
+    title: "OLIMPICO",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/body olimpico.jpg",
+  },
+  {
+    id: 6,
+    title: "REDONDO",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/body redondo.jpg",
+  },
+  {
+    id: 7,
+    title: "ELISA",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/elisa.jpg",
+  },
+  {
+    id: 8,
+    title: "FALDA",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/falda.jpg",
+  },
+  {
+    id: 9,
+    title: "FER",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/fer.jpg",
+  },
+  {
+    id: 10,
+    title: "FRESA",
+    category: "SUETER",
+    price: 34.99,
+    image:
+      "img/fresa sueter.jpg",
+  },
+  {
+    id: 11,
+    title: "IBONNI",
+    category: "SUETER",
+    price: 34.99,
+    image:
+      "img/ibonni.jpg",
+  },
+  {
+    id: 12,
+    title: "OLIVIA",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/olivia.jpg",
+  },
+  {
+    id: 13,
+    title: "RAYAS",
+    category: "FIT",
+    price: 34.99,
+    image:
+      "img/rayas.jpg",
+  },
+  {
+    id: 14,
+    title: "VICTORIA",
+    category: "BODY",
+    price: 34.99,
+    image:
+      "img/victoria.jpg",
+  },
 ];
 
 // Tasa BCV Simulada del día
-const BCV_RATE = 40.50;
+const BCV_RATE = 40.5;
 const WHATSAPP_NUMBER = "584241234567"; // Número de contacto de Avellvis ficticio
 
 // Estado de la Aplicación
@@ -90,69 +157,84 @@ document.addEventListener("DOMContentLoaded", () => {
 // Registrar eventos globales
 function setupEventListeners() {
   // Manejo del scroll para navbar
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  }
 
   // Drawer del Carrito
-  cartToggle.addEventListener("click", openCart);
-  cartClose.addEventListener("click", closeCart);
-  cartOverlay.addEventListener("click", closeCart);
+  if (cartToggle) cartToggle.addEventListener("click", openCart);
+  if (cartClose) cartClose.addEventListener("click", closeCart);
+  if (cartOverlay) cartOverlay.addEventListener("click", closeCart);
 
   // Menú Móvil
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    // Animación simple del botón de hamburguesa
-    const spans = menuToggle.querySelectorAll("span");
-    spans[0].style.transform = navLinks.classList.contains("active") ? "rotate(45deg) translate(5px, 6px)" : "none";
-    spans[1].style.opacity = navLinks.classList.contains("active") ? "0" : "1";
-    spans[2].style.transform = navLinks.classList.contains("active") ? "rotate(-45deg) translate(5px, -6px)" : "none";
-  });
-
-  // Cerrar menú móvil al hacer clic en un enlace
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
       const spans = menuToggle.querySelectorAll("span");
-      spans[0].style.transform = "none";
-      spans[1].style.opacity = "1";
-      spans[2].style.transform = "none";
+      if (spans.length >= 3) {
+        spans[0].style.transform = navLinks.classList.contains("active")
+          ? "rotate(45deg) translate(5px, 6px)"
+          : "none";
+        spans[1].style.opacity = navLinks.classList.contains("active")
+          ? "0"
+          : "1";
+        spans[2].style.transform = navLinks.classList.contains("active")
+          ? "rotate(-45deg) translate(5px, -6px)"
+          : "none";
+      }
     });
-  });
+
+    // Cerrar menú móvil al hacer clic en un enlace
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        const spans = menuToggle.querySelectorAll("span");
+        if (spans.length >= 3) {
+          spans[0].style.transform = "none";
+          spans[1].style.opacity = "1";
+          spans[2].style.transform = "none";
+        }
+      });
+    });
+  }
 
   // Cerrar Modal 3D
-  modalClose.addEventListener("click", close3DModal);
-  lightboxModal.addEventListener("click", (e) => {
-    if (e.target === lightboxModal) close3DModal();
-  });
+  if (modalClose) modalClose.addEventListener("click", close3DModal);
+  if (lightboxModal) {
+    lightboxModal.addEventListener("click", (e) => {
+      if (e.target === lightboxModal) close3DModal();
+    });
+  }
 
   // Finalizar Compra por WhatsApp
-  btnCheckout.addEventListener("click", checkoutCart);
+  if (btnCheckout) btnCheckout.addEventListener("click", checkoutCart);
 
   // Formulario de Contacto
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      alert("¡Gracias por escribirnos! Tu mensaje ha sido enviado exitosamente. Nos comunicaremos contigo a la brevedad.");
+      alert(
+        "¡Gracias por escribirnos! Tu mensaje ha sido enviado exitosamente. Nos comunicaremos contigo a la brevedad.",
+      );
       contactForm.reset();
     });
   }
 
-  // Control de progreso de carga de Modelos 3D
+  // Control de progreso de carga seguro (Evaluación limpia sin lanzar errores por elementos null)
   if (modalViewer) {
     modalViewer.addEventListener("progress", (e) => {
       const updateBar = document.getElementById("update-bar");
       if (updateBar) {
-        // e.detail.totalProgress es un decimal de 0 a 1
         const percent = Math.round(e.detail.totalProgress * 100);
         updateBar.style.width = `${percent}%`;
-        
-        // Cuando llega al 100%, añade la clase ready para desvanecer la barra
+
         if (percent >= 100) {
           setTimeout(() => {
             modalViewer.classList.add("ready");
@@ -168,9 +250,9 @@ function renderProducts() {
   if (!productsGrid) return;
   productsGrid.innerHTML = "";
 
-  PRODUCTS.forEach(product => {
+  PRODUCTS.forEach((product) => {
     const priceBs = (product.price * BCV_RATE).toFixed(2);
-    
+
     const card = document.createElement("div");
     card.className = "product-card";
     card.setAttribute("data-id", product.id);
@@ -218,80 +300,89 @@ function renderProducts() {
 }
 
 // Abrir Modal 3D e inicializar <model-viewer>
-window.open3DModal = function(productId) {
-  const product = PRODUCTS.find(p => p.id === productId);
+window.open3DModal = function (productId) {
+  const product = PRODUCTS.find((p) => p.id === productId);
   if (!product) return;
 
   const priceBs = (product.price * BCV_RATE).toFixed(2);
 
-  // Setear datos de texto en el modal
-  modalTitle.textContent = product.title;
-  modalCategory.textContent = product.category;
-  modalPrice.textContent = `$${product.price}`;
-  modalPriceBs.textContent = `Equivalente a ${priceBs} BS (Tasa BCV del día)`;
-  modalDescription.textContent = product.description;
+  if (modalTitle) modalTitle.textContent = product.title;
+  if (modalCategory) modalCategory.textContent = product.category;
+  if (modalPrice) modalPrice.textContent = `$${product.price}`;
+  if (modalPriceBs)
+    modalPriceBs.textContent = `Equivalente a ${priceBs} BS (Tasa BCV del día)`;
+  if (modalDescription) modalDescription.textContent = product.description;
 
   // Renderizar especificaciones
-  modalSpecsContainer.innerHTML = "";
-  Object.entries(product.specs).forEach(([key, val]) => {
-    const row = document.createElement("div");
-    row.className = "modal-specs-row";
-    row.innerHTML = `<strong>${key}:</strong> <span>${val}</span>`;
-    modalSpecsContainer.appendChild(row);
-  });
+  if (modalSpecsContainer) {
+    modalSpecsContainer.innerHTML = "";
+    Object.entries(product.specs).forEach(([key, val]) => {
+      const row = document.createElement("div");
+      row.className = "modal-specs-row";
+      row.innerHTML = `<strong>${key}:</strong> <span>${val}</span>`;
+      modalSpecsContainer.appendChild(row);
+    });
+  }
 
   // Configurar botones de acción del modal
-  modalBtnAddCart.onclick = () => {
-    addToCart(product.id);
-    close3DModal();
-  };
-  modalBtnInquire.onclick = () => {
-    inquireProduct(product.id);
-  };
+  if (modalBtnAddCart) {
+    modalBtnAddCart.onclick = () => {
+      addToCart(product.id);
+      close3DModal();
+    };
+  }
+  if (modalBtnInquire) {
+    modalBtnInquire.onclick = () => {
+      inquireProduct(product.id);
+    };
+  }
 
   // Cargar dinámicamente el modelo 3D en <model-viewer>
-  const updateBar = document.getElementById("update-bar");
-  if (updateBar) updateBar.style.width = "0%";
-  modalViewer.classList.remove("ready");
+  if (modalViewer) {
+    const updateBar = document.getElementById("update-bar");
+    if (updateBar) updateBar.style.width = "0%";
+    modalViewer.classList.remove("ready");
 
-  modalViewer.setAttribute("src", product.modelUrl);
-  modalViewer.setAttribute("poster", product.image);
-  modalViewer.setAttribute("alt", `Modelo 3D de ${product.title}`);
+    modalViewer.setAttribute("src", product.modelUrl);
+    modalViewer.setAttribute("poster", product.image);
+    modalViewer.setAttribute("alt", `Modelo 3D de ${product.title}`);
+  }
 
   // Mostrar modal
-  lightboxModal.classList.add("active");
-  document.body.style.overflow = "hidden"; // Desactivar scroll de la página de fondo
+  if (lightboxModal) lightboxModal.classList.add("active");
+  document.body.style.overflow = "hidden";
 };
 
 // Cerrar Modal 3D
 function close3DModal() {
-  lightboxModal.classList.remove("active");
-  document.body.style.overflow = ""; // Reactivar scroll
+  if (lightboxModal) lightboxModal.classList.remove("active");
+  document.body.style.overflow = "";
 
-  // Limpiar src de model-viewer para liberar memoria WebGL
-  modalViewer.removeAttribute("src");
-  modalViewer.removeAttribute("poster");
+  if (modalViewer) {
+    modalViewer.removeAttribute("src");
+    modalViewer.removeAttribute("poster");
+  }
 }
 
-// Acción del Botón Consultar: Envía un mensaje directo a Whatsapp con los detalles del producto
-window.inquireProduct = function(productId) {
-  const product = PRODUCTS.find(p => p.id === productId);
+// Acción del Botón Consultar
+window.inquireProduct = function (productId) {
+  const product = PRODUCTS.find((p) => p.id === productId);
   if (!product) return;
 
   const message = `Hola Avellvis Collection, me gustaría consultar la disponibilidad del producto: *${product.title}* ($${product.price}) de la categoría ${product.category}. ¿Tienen stock disponible actualmente? ¡Gracias!`;
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}`;
-  
+
   window.open(whatsappUrl, "_blank");
 };
 
 // --- Gestión de Carrito de Compras ---
 
-window.addToCart = function(productId) {
-  const product = PRODUCTS.find(p => p.id === productId);
+window.addToCart = function (productId) {
+  const product = PRODUCTS.find((p) => p.id === productId);
   if (!product) return;
 
-  const existingItem = cart.find(item => item.product.id === productId);
+  const existingItem = cart.find((item) => item.product.id === productId);
   if (existingItem) {
     existingItem.quantity += 1;
   } else {
@@ -300,63 +391,58 @@ window.addToCart = function(productId) {
 
   saveCartToStorage();
   updateCartUI();
-  
-  // Animación del botón del carrito en el header
-  cartToggle.style.transform = "scale(1.2)";
-  setTimeout(() => {
-    cartToggle.style.transform = "none";
-  }, 200);
 
-  // Abrir carrito automáticamente
+  if (cartToggle) {
+    cartToggle.style.transform = "scale(1.2)";
+    setTimeout(() => {
+      cartToggle.style.transform = "none";
+    }, 200);
+  }
+
   openCart();
 };
 
 function openCart() {
-  cartDrawer.classList.add("active");
-  cartOverlay.classList.add("active");
+  if (cartDrawer) cartDrawer.classList.add("active");
+  if (cartOverlay) cartOverlay.classList.add("active");
   document.body.style.overflow = "hidden";
 }
 
 function closeCart() {
-  cartDrawer.classList.remove("active");
-  cartOverlay.classList.remove("active");
+  if (cartDrawer) cartDrawer.classList.remove("active");
+  if (cartOverlay) cartOverlay.classList.remove("active");
   document.body.style.overflow = "";
 }
 
-window.changeQty = function(productId, delta) {
-  const item = cart.find(item => item.product.id === productId);
+window.changeQty = function (productId, delta) {
+  const item = cart.find((item) => item.product.id === productId);
   if (!item) return;
 
   item.quantity += delta;
   if (item.quantity <= 0) {
-    cart = cart.filter(item => item.product.id !== productId);
+    cart = cart.filter((item) => item.product.id !== productId);
   }
 
   saveCartToStorage();
   updateCartUI();
 };
 
-window.removeFromCart = function(productId) {
-  cart = cart.filter(item => item.product.id !== productId);
+window.removeFromCart = function (productId) {
+  cart = cart.filter((item) => item.product.id !== productId);
   saveCartToStorage();
   updateCartUI();
 };
 
 function updateCartUI() {
-  // Actualizar contador del header
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
-  cartCount.textContent = totalItems;
-  
-  // Toggle de visibilidad de contador
-  if (totalItems > 0) {
-    cartCount.style.transform = "scale(1)";
-  } else {
-    cartCount.style.transform = "scale(0)";
+  if (cartCount) {
+    cartCount.textContent = totalItems;
+    cartCount.style.transform = totalItems > 0 ? "scale(1)" : "scale(0)";
   }
 
-  // Renderizar items del drawer
+  if (!cartItemsContainer) return;
   cartItemsContainer.innerHTML = "";
-  
+
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = `
       <div class="cart-empty-message">
@@ -369,19 +455,23 @@ function updateCartUI() {
         <small>Agrega prendas exclusivas de nuestro catálogo</small>
       </div>
     `;
-    cartTotalVal.textContent = "$0.00";
-    cartTotalBs.textContent = "0.00 BS";
-    btnCheckout.disabled = true;
-    btnCheckout.style.opacity = "0.5";
+    if (cartTotalVal) cartTotalVal.textContent = "$0.00";
+    if (cartTotalBs) cartTotalBs.textContent = "0.00 BS";
+    if (btnCheckout) {
+      btnCheckout.disabled = true;
+      btnCheckout.style.opacity = "0.5";
+    }
     return;
   }
 
-  btnCheckout.disabled = false;
-  btnCheckout.style.opacity = "1";
+  if (btnCheckout) {
+    btnCheckout.disabled = false;
+    btnCheckout.style.opacity = "1";
+  }
 
   let subtotal = 0;
 
-  cart.forEach(item => {
+  cart.forEach((item) => {
     const itemTotal = item.product.price * item.quantity;
     subtotal += itemTotal;
 
@@ -409,23 +499,26 @@ function updateCartUI() {
   });
 
   const totalBs = subtotal * BCV_RATE;
-  cartTotalVal.textContent = `$${subtotal.toFixed(2)}`;
-  cartTotalBs.textContent = `${totalBs.toFixed(2)} BS`;
+  if (cartTotalVal) cartTotalVal.textContent = "$${subtotal.toFixed(2)}";
+  if (cartTotalBs) cartTotalBs.textContent = `${totalBs.toFixed(2)} BS`;
 }
 
-// Compilar mensaje y enviar pedido a Whatsapp
+// Compilar mensaje, enviar pedido a WhatsApp y vaciar los datos de la web de manera limpia
 function checkoutCart() {
   if (cart.length === 0) return;
 
   let message = `*PEDIDO NUEVO - AVELLVIS COLLECTION*\n`;
   message += `==============================\n\n`;
-  
-  cart.forEach(item => {
+
+  cart.forEach((item) => {
     const itemTotal = item.product.price * item.quantity;
     message += `• *${item.product.title}* (x${item.quantity}) - $${itemTotal.toFixed(2)}\n`;
   });
 
-  const subtotal = cart.reduce((acc, item) => acc + (item.product.price * item.quantity), 0);
+  const subtotal = cart.reduce(
+    (acc, item) => acc + item.product.price * item.quantity,
+    0,
+  );
   const totalBs = subtotal * BCV_RATE;
 
   message += `\n==============================\n`;
@@ -436,7 +529,23 @@ function checkoutCart() {
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}`;
 
+  // 1. Abrir la pestaña externa con la API de WhatsApp sin demoras asíncronas
   window.open(whatsappUrl, "_blank");
+
+  // 2. Limpieza de datos integrada sin romper el hilo de procesamiento de la ventana
+  setTimeout(() => {
+    // Vaciar variables internas y limpiar LocalStorage
+    cart = [];
+    saveCartToStorage();
+
+    // Limpiar el Formulario de contacto si existe en la página actual
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) contactForm.reset();
+
+    // Forzar actualización visual completa y cerrar el cajón del carrito de forma fluida
+    updateCartUI();
+    closeCart();
+  }, 400);
 }
 
 // Local Storage helpers

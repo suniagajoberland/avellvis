@@ -1,344 +1,533 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avellvis Collection | Moda Exclusiva & Estilo Premium</title>
-  <meta name="description" content="Descubre la colección exclusiva de Avellvis. Explora nuestras prendas elegantes y realiza tu pedido directo vía WhatsApp. Diseños hechos con amor.">
-  
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avellvis | Moda Exclusiva & Estilo Premium</title>
+    <meta
+      name="description"
+      content="Descubre la colección exclusiva de Avellvis. Explora nuestras prendas elegantes y realiza tu pedido directo vía WhatsApp. Diseños hechos con amor."
+    />
 
-  <nav class="navbar" id="navbar">
-    <div class="nav-brand">
-      AVELLVIS
-      <span>COLLECTION</span>
-    </div>
-    
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#catalogo">Catálogo</a></li>
-      <li><a href="#info">Información</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
+    <link rel="icon" type="image/jpeg" href="/img/av.png" />
 
-    <div class="nav-actions">
-      <button class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <path d="M16 10a4 4 0 0 1-8 0"></path>
-        </svg>
-        <span class="cart-count" id="cart-count">0</span>
-      </button>
-
-      <button class="menu-mobile-toggle" id="menu-mobile-toggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <header class="hero" id="inicio">
-    <div class="hero-video-container">
-      <video autoplay muted loop playsinline id="hero-video">
-        <source src="https://cdn.pixabay.com/video/2021/05/28/75550-556034413_large.mp4" type="video/mp4">
-        Tu navegador no soporta el formato de video.
-      </video>
-      <div class="hero-video-overlay"></div>
-    </div>
-    
-    <div class="hero-content">
-      <span class="hero-subtitle">Nueva Colección de Temporada</span>
-      <h1 class="hero-title">Estilo único en tonos <em>cálidos</em></h1>
-      <a href="#catalogo" class="hero-btn">Explorar Catálogo</a>
-    </div>
-  </header>
-
-  <section class="section-padding catalog-section" id="catalogo">
-    <div class="section-header">
-      <span class="section-tag">Colección Exclusiva</span>
-      <h2 class="section-title">Nuestras Prendas</h2>
-      <p style="color: var(--color-text-secondary); margin-top: 1rem;">Explora nuestra última colección, agrega tus prendas al carrito y realiza tus consultas de manera directa y personalizada.</p>
-    </div>
-    
-    <div class="products-grid" id="products-grid">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-brand">
+        <img
+          src="img/logo.png"
+          alt="Avellvis"
+          class="nav-logo-img"
+          style="max-height: 50px; width: auto; object-fit: contain"
+        />
       </div>
-  </section>
 
-  <section class="section-padding info-section" id="info">
-    <div class="section-header">
-      <span class="section-tag">Cómo comprar</span>
-      <h2 class="section-title">Información Importante</h2>
-    </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#info">Información</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
 
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="info-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="2" y1="10" x2="22" y2="10"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="10" y1="23" x2="14" y2="23"></line>
+      <div class="nav-actions">
+        <button class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
           </svg>
-        </div>
-        <h3 class="info-title">1. ¿Cómo Comprar?</h3>
-        <ul class="info-list">
-          <li>Agrega tus productos favoritos al carrito en esta página.</li>
-          <li>Revisa tu orden y presiona "Finalizar Compra" para compilar tu pedido.</li>
-          <li>Serás redirigido a WhatsApp para confirmar disponibilidad inmediata de tallas.</li>
-          <li>Realiza tu pago vía Pago Móvil, Transferencia o Binance (tasa BCV del día).</li>
-        </ul>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+
+        <button
+          class="menu-mobile-toggle"
+          id="menu-mobile-toggle"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+      <div class="hero-video-container">
+        <video autoplay muted loop playsinline id="hero-video">
+          <source
+            src="https://cdn.pixabay.com/video/2021/05/28/75550-556034413_large.mp4"
+            type="video/mp4"
+          />
+          Tu navegador no soporta el formato de video.
+        </video>
+        <div class="hero-video-overlay"></div>
       </div>
 
-      <div class="info-card">
-        <div class="info-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-        </div>
-        <h3 class="info-title">2. Garantías & Horarios</h3>
-        <ul class="info-list">
-          <li>Cambios de talla o modelo dentro de las 24 horas de haber recibido tu pedido.</li>
-          <li>La prenda debe estar sin uso, con etiquetas y en empaque original.</li>
-          <li>Atención de Lunes a Viernes de 9:00 AM a 4:00 PM.</li>
-        </ul>
-        <span class="info-highlight">No realizamos devoluciones de dinero</span>
+      <div class="hero-content">
+        <span class="hero-subtitle">Nueva Colección de Temporada</span>
+        <h1 class="hero-title">Estilo único en tonos <em>cálidos</em></h1>
+        <a href="#catalogo" class="hero-btn">Explorar Catálogo</a>
+      </div>
+    </header>
+
+    <section class="section-padding catalog-section" id="catalogo">
+      <div class="section-header">
+        <span class="section-tag">Colección Exclusiva</span>
+        <h2 class="section-title">Nuestras Prendas</h2>
+        <p style="color: var(--color-text-secondary); margin-top: 1rem">
+          Explora nuestra última colección, agrega tus prendas al carrito y
+          realiza tus consultas de manera directa y personalizada.
+        </p>
       </div>
 
-      <div class="info-card">
-        <div class="info-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
-            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-            <circle cx="5.5" cy="18.5" r="2.5"></circle>
-            <circle cx="18.5" cy="18.5" r="2.5"></circle>
-          </svg>
-        </div>
-        <h3 class="info-title">3. Forma de Entrega</h3>
-        <ul class="info-list">
-          <li>Servicio de delivery a domicilio en toda Caracas.</li>
-          <li>Entregas programadas en horario de mañana: 9:00 AM a 12:00 PM.</li>
-          <li>Costos accesibles desde $2 en adelante para zonas céntricas de la ciudad.</li>
-        </ul>
+      <div class="products-grid" id="products-grid"></div>
+    </section>
+
+    <section class="section-padding info-section" id="info">
+      <div class="section-header">
+        <span class="section-tag">Cómo comprar</span>
+        <h2 class="section-title">Información Importante</h2>
       </div>
-    </div>
-  </section>
 
-  <section class="section-padding contact-section" id="contacto">
-    <div class="contact-container">
-      <div class="contact-info-col">
-        <h3>Escríbenos y conéctate con nosotros</h3>
-        <p>¿Tienes dudas con respecto a las tallas o materiales? Completa el formulario de contacto o búscanos en nuestras plataformas sociales para atención en vivo.</p>
-        
-        <div class="contact-details">
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </div>
-            <div class="contact-detail-text">
-              <h4>Email de atención</h4>
-              <p>soporte@avellvis.com</p>
-            </div>
-          </div>
-
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-            </div>
-            <div class="contact-detail-text">
-              <h4>Ubicación</h4>
-              <p>Caracas, Venezuela</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="social-links">
-          <a href="https://instagram.com/avellvis.collection" target="_blank" class="social-btn" aria-label="Instagram de Avellvis">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="10" y1="23" x2="14" y2="23"></line>
             </svg>
-          </a>
-          <a href="https://tiktok.com/@avellvis.collection" target="_blank" class="social-btn" aria-label="TikTok de Avellvis">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+          </div>
+          <h3 class="info-title">1. ¿Cómo Comprar?</h3>
+          <ul class="info-list">
+            <li>Agrega tus productos favoritos al carrito en esta página.</li>
+            <li>
+              Revisa tu orden y presiona "Finalizar Compra" para compilar tu
+              pedido.
+            </li>
+            <li>
+              Serás redirigido a WhatsApp para confirmar disponibilidad
+              inmediata de tallas.
+            </li>
+            <li>
+              Realiza tu pago vía Pago Móvil, Transferencia o Binance (tasa BCV
+              del día).
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
-          </a>
+          </div>
+          <h3 class="info-title">2. Garantías & Horarios</h3>
+          <ul class="info-list">
+            <li>
+              Cambios de talla o modelo dentro de las 24 horas de haber recibido
+              tu pedido.
+            </li>
+            <li>
+              La prenda debe estar sin uso, con etiquetas y en empaque original.
+            </li>
+            <li>Atención de Lunes a Viernes de 9:00 AM a 4:00 PM.</li>
+          </ul>
+          <span class="info-highlight"
+            >No realizamos devoluciones de dinero</span
+          >
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <h3 class="info-title">3. Forma de Entrega</h3>
+          <ul class="info-list">
+            <li>Servicio de delivery a domicilio en toda Caracas.</li>
+            <li>
+              Entregas programadas en horario de mañana: 9:00 AM a 12:00 PM.
+            </li>
+            <li>
+              Costos accesibles desde $2 en adelante para zonas céntricas de la
+              ciudad.
+            </li>
+          </ul>
         </div>
       </div>
+    </section>
 
-      <div class="contact-form-col">
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="contact-name" class="form-label">Nombre Completo</label>
-            <input type="text" id="contact-name" class="form-input" placeholder="Ej: Valentina Pérez" required>
+    <section class="section-padding contact-section" id="contacto">
+      <div class="contact-container">
+        <div class="contact-info-col">
+          <h3>Escríbenos y conéctate con nosotros</h3>
+          <p>
+            ¿Tienes dudas con respecto a las tallas o materiales? Completa el
+            formulario de contacto o búscanos en nuestras plataformas sociales
+            para atención en vivo.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Email de atención</h4>
+                <p>soporte@avellvis.com</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Ubicación</h4>
+                <p>Caracas, Venezuela</p>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="contact-email" class="form-label">Correo Electrónico</label>
-            <input type="email" id="contact-email" class="form-input" placeholder="Ej: valentina@gmail.com" required>
+
+          <div class="social-links">
+            <a
+              href="https://instagram.com/avellvis.collection"
+              target="_blank"
+              class="social-btn"
+              aria-label="Instagram de Avellvis"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a
+              href="https://tiktok.com/@avellvis.collection"
+              target="_blank"
+              class="social-btn"
+              aria-label="TikTok de Avellvis"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
           </div>
-          <div class="form-group">
-            <label for="contact-phone" class="form-label">Número de Teléfono</label>
-            <input type="tel" id="contact-phone" class="form-input" placeholder="Ej: 04241234567" required>
-          </div>
-          <div class="form-group">
-            <label for="contact-message" class="form-label">Mensaje o Consulta</label>
-            <textarea id="contact-message" class="form-input" placeholder="Describe brevemente tus dudas aquí..." required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Enviar Consulta</button>
-        </form>
+        </div>
+
+        <div class="contact-form-col">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label"
+                >Nombre Completo</label
+              >
+              <input
+                type="text"
+                id="contact-name"
+                class="form-input"
+                placeholder="Ej: Valentina Pérez"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contact-email" class="form-label"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                id="contact-email"
+                class="form-input"
+                placeholder="Ej: valentina@gmail.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contact-phone" class="form-label"
+                >Número de Teléfono</label
+              >
+              <input
+                type="tel"
+                id="contact-phone"
+                class="form-input"
+                placeholder="Ej: 04241234567"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label"
+                >Mensaje o Consulta</label
+              >
+              <textarea
+                id="contact-message"
+                class="form-input"
+                placeholder="Describe brevemente tus dudas aquí..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Consulta</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Tu Pedido</h3>
+        <button
+          class="cart-drawer-close"
+          id="cart-drawer-close"
+          aria-label="Cerrar carrito"
+        >
+          &times;
+        </button>
+      </div>
+
+      <div class="cart-items-container" id="cart-items-container"></div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal USD:</span>
+          <span class="cart-summary-total" id="cart-total-val">$0.00</span>
+        </div>
+        <div class="cart-summary-row" style="margin-bottom: 1.5rem">
+          <span>Total Estimado BS:</span>
+          <span class="cart-summary-total-val" id="cart-total-bs">0.00 BS</span>
+        </div>
+        <div class="cart-shipping-notice">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          Entregas a coordinar en Caracas (costo de delivery adicional).
+        </div>
+        <button class="btn-checkout" id="btn-checkout">
+          Enviar pedido a WhatsApp
+        </button>
       </div>
     </div>
-  </section>
 
-  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
-  <div class="cart-drawer" id="cart-drawer">
-    <div class="cart-drawer-header">
-      <h3 class="cart-drawer-title">Tu Pedido</h3>
-      <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Cerrar carrito">&times;</button>
-    </div>
-    
-    <div class="cart-items-container" id="cart-items-container">
+    <footer>
+      <div class="footer-logo">
+        <img
+          src="/img/logo.png"
+          alt="Avellvis"
+          class="footer-logo-img"
+          style="max-height: 35px; width: auto; object-fit: contain"
+        />
       </div>
+      <ul class="footer-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#info">Información</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">
+        Hecho con Amor por Avellvis &copy; 2026. Todos los derechos reservados.
+      </p>
+    </footer>
 
-    <div class="cart-drawer-footer">
-      <div class="cart-summary-row">
-        <span>Subtotal USD:</span>
-        <span class="cart-summary-total" id="cart-total-val">$0.00</span>
-      </div>
-      <div class="cart-summary-row" style="margin-bottom: 1.5rem;">
-        <span>Total Estimado BS:</span>
-        <span class="cart-summary-total-val" id="cart-total-bs">0.00 BS</span>
-      </div>
-      <div class="cart-shipping-notice">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-        </svg>
-        Entregas a coordinar en Caracas (costo de delivery adicional).
-      </div>
-      <button class="btn-checkout" id="btn-checkout">
-        Enviar pedido a WhatsApp
-      </button>
-    </div>
-  </div>
+    <script src="app.js"></script>
 
-  <footer>
-    <div class="footer-logo">
-      AVELLVIS
-      <span>COLLECTION</span>
-    </div>
-    <ul class="footer-nav">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#catalogo">Catálogo</a></li>
-      <li><a href="#info">Información</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <div class="footer-divider"></div>
-    <p class="footer-copy">Hecho con Amor por Avellvis &copy; 2026. Todos los derechos reservados.</p>
-  </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btnCheckout = document.getElementById("btn-checkout");
 
-  <script src="app.js"></script>
+        if (btnCheckout) {
+          btnCheckout.addEventListener("click", () => {
+            const cartItemsContainer = document.getElementById(
+              "cart-items-container",
+            );
+            const items = cartItemsContainer.querySelectorAll(
+              ".cart-item, div[data-title], .item-cart",
+            );
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btnCheckout = document.getElementById('btn-checkout');
-      
-      if (btnCheckout) {
-        btnCheckout.addEventListener('click', () => {
-          const cartItemsContainer = document.getElementById('cart-items-container');
-          // Se asume que en app.js cada producto agregado tiene una clase identificadora (ej: .cart-item)
-          const items = cartItemsContainer.querySelectorAll('.cart-item, div[data-title], .item-cart'); 
-          
-          let totalUsd = document.getElementById('cart-total-val')?.textContent || '$0.00';
-          let totalBs = document.getElementById('cart-total-bs')?.textContent || '0.00 BS';
-          
-          let mensaje = `🛍️ *¡Hola Avellvis Collection!* Realizo mi pedido desde la web:\n\n`;
-          let tieneProductos = false;
+            let totalUsd =
+              document.getElementById("cart-total-val")?.textContent || "$0.00";
+            let totalBs =
+              document.getElementById("cart-total-bs")?.textContent ||
+              "0.00 BS";
 
-          // Si tu app.js almacena un array global o lees el DOM:
-          if (items.length > 0) {
-            items.forEach((item, index) => {
-              // Intenta extraer texto limpio de los elementos correspondientes
-              const nombre = item.querySelector('.cart-item-title, .product-title, h4')?.textContent.trim() || `Producto ${index + 1}`;
-              const cantidad = item.querySelector('.cart-item-quantity, .qty, span')?.textContent.trim() || '1';
-              const precio = item.querySelector('.cart-item-price, .price')?.textContent.trim() || '';
-              
-              mensaje += `🔹 *${nombre}* (Cant: ${cantidad}) ${precio ? `- ${precio}` : ''}\n`;
-              tieneProductos = true;
-            });
-          } else {
-            // Alternativa por si el DOM usa selectores planos o texto directo en el contenedor
-            const textoPlano = cartItemsContainer.textContent.trim();
-            if (textoPlano && !textoPlano.includes('vacío')) {
-              mensaje += `${textoPlano}\n`;
-              tieneProductos = true;
+            let mensaje = `🛍️ *¡Hola Avellvis!* Realizo mi pedido desde la web:\n\n`;
+            let tieneProductos = false;
+
+            if (items.length > 0) {
+              items.forEach((item, index) => {
+                const nombre =
+                  item
+                    .querySelector(".cart-item-title, .product-title, h4")
+                    ?.textContent.trim() || `Producto ${index + 1}`;
+                const cantidad =
+                  item
+                    .querySelector(".cart-item-quantity, .qty, span")
+                    ?.textContent.trim() || "1";
+                const precio =
+                  item
+                    .querySelector(
+                      ".cart-item-remove, .cart-item-price, .price",
+                    )
+                    ?.textContent.trim() || "";
+
+                mensaje += `🔹 *${nombre}* (Cant: ${cantidad}) ${precio ? `- ${precio}` : ""}\n`;
+                tieneProductos = true;
+              });
+            } else {
+              const textoPlano = cartItemsContainer.textContent.trim();
+              if (textoPlano && !textoPlano.includes("vacío")) {
+                mensaje += `${textoPlano}\n`;
+                tieneProductos = true;
+              }
             }
-          }
 
-          if (!tieneProductos) {
-            alert('El carrito está vacío. Agrega prendas de la colección antes de continuar.');
-            return;
-          }
+            if (!tieneProductos) {
+              alert(
+                "El carrito está vacío. Agrega prendas de la colección antes de continuar.",
+              );
+              return;
+            }
 
-          mensaje += `\n💵 *Subtotal USD:* ${totalUsd}`;
-          mensaje += `\n🇻🇪 *Total Estimado:* ${totalBs}`;
-          mensaje += `\n\n📍 *Ubicación:* Caracas, Venezuela.`;
-          mensaje += `\n⚙️ _Por favor, confírmame la disponibilidad de las piezas._`;
+            mensaje += `\n💵 *Subtotal USD:* ${totalUsd}`;
+            mensaje += `\n🇻🇪 *Total Estimado:* ${totalBs}`;
+            mensaje += `\n\n📍 *Ubicación:* Caracas, Venezuela.`;
+            mensaje += `\n⚙️ _Por favor, confírmame la disponibilidad de las piezas._`;
 
-          // Formateo del número telefónico de Venezuela de 04226382165 a formato internacional +584226382165
-          const numeroWhatsApp = "584226382165";
-          const urlBase = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+            const numeroWhatsApp = "584226382165";
+            const urlBase = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
 
-          // Abre la pestaña de WhatsApp
-          window.open(urlBase, '_blank');
+            window.open(urlBase, "_blank");
 
-          // --- Procesar la limpieza de datos solicitada ---
-          
-          // 1. Limpiar Formulario de Contacto
-          const contactoForm = document.getElementById('contact-form');
-          if (contactoForm) contactoForm.reset();
+            // --- Procesar la limpieza de datos solicitada ---
+            const contactoForm = document.getElementById("contact-form");
+            if (contactoForm) contactoForm.reset();
 
-          // 2. Intentar vaciar el estado del carrito en tu app.js si existe la función global
-          if (typeof limpiarCarritoGlobal === 'function') {
-            limpiarCarritoGlobal();
-          } else {
-            // Limpieza manual de respaldo sobre el DOM de la interfaz
-            if (cartItemsContainer) cartItemsContainer.innerHTML = '';
-            
-            const cartCount = document.getElementById('cart-count');
-            if (cartCount) cartCount.textContent = '0';
-            
-            const totalVal = document.getElementById('cart-total-val');
-            if (totalVal) totalVal.textContent = '$0.00';
-            
-            const totalBsVal = document.getElementById('cart-total-bs');
-            if (totalBsVal) totalBsVal.textContent = '0.00 BS';
+            if (typeof limpiarCarritoGlobal === "function") {
+              limpiarCarritoGlobal();
+            } else {
+              if (cartItemsContainer) cartItemsContainer.innerHTML = "";
 
-            // Remover del localStorage si app.js los guarda ahí
-            localStorage.removeItem('cart');
-            localStorage.removeItem('carrito');
-          }
+              const cartCount = document.getElementById("cart-count");
+              if (cartCount) cartCount.textContent = "0";
 
-          // Cierra el drawer automáticamente tras el flujo
-          const overlay = document.getElementById('cart-drawer-overlay');
-          const drawer = document.getElementById('cart-drawer');
-          if (drawer) drawer.classList.remove('active', 'open');
-          if (overlay) overlay.classList.remove('active', 'open');
-        });
-      }
-    });
-  </script>
-</body>
+              const totalVal = document.getElementById("cart-total-val");
+              if (totalVal) totalVal.textContent = "$0.00";
+
+              const totalBsVal = document.getElementById("cart-total-bs");
+              if (totalBsVal) totalBsVal.textContent = "0.00 BS";
+
+              localStorage.removeItem("cart");
+              localStorage.removeItem("carrito");
+            }
+
+            const overlay = document.getElementById("cart-drawer-overlay");
+            const drawer = document.getElementById("cart-drawer");
+            if (drawer) drawer.classList.remove("active", "open");
+            if (overlay) overlay.classList.remove("active", "open");
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
