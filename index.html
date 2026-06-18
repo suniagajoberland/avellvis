@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avellvis | Moda Exclusiva & Estilo Premium</title>
+    <title>Avellvis | Moda Exclusiva & Estilo</title>
     <meta
       name="description"
       content="Descubre la colección exclusiva de Avellvis. Explora nuestras prendas elegantes y realiza tu pedido directo vía WhatsApp. Diseños hechos con amor."
@@ -224,7 +224,9 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </div>
@@ -240,17 +242,34 @@
           <form id="contact-form" class="contact-form">
             <div class="form-group">
               <label for="form-name">Nombre Completo</label>
-              <input type="text" id="form-name" required placeholder="Ej. María Pérez" />
+              <input
+                type="text"
+                id="form-name"
+                required
+                placeholder="Ej. María Pérez"
+              />
             </div>
             <div class="form-group">
               <label for="form-phone">Teléfono / WhatsApp</label>
-              <input type="tel" id="form-phone" required placeholder="Ej. +58 424 1234567" />
+              <input
+                type="tel"
+                id="form-phone"
+                required
+                placeholder="Ej. +58 424 1234567"
+              />
             </div>
             <div class="form-group">
               <label for="form-message">Mensaje</label>
-              <textarea id="form-message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+              <textarea
+                id="form-message"
+                rows="4"
+                required
+                placeholder="¿En qué podemos ayudarte?"
+              ></textarea>
             </div>
-            <button type="submit" class="btn-submit-form">Enviar Mensaje</button>
+            <button type="submit" class="btn-submit-form">
+              Enviar Mensaje
+            </button>
           </form>
         </div>
       </div>
@@ -261,7 +280,16 @@
       <div class="cart-drawer-header">
         <h2>Tu Carrito</h2>
         <button id="cart-drawer-close" aria-label="Cerrar carrito">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
@@ -285,14 +313,20 @@
 
     <div class="lightbox-modal" id="lightbox-modal">
       <div class="modal-content">
-        <button class="modal-close" id="modal-close" aria-label="Cerrar modal">&times;</button>
+        <button class="modal-close" id="modal-close" aria-label="Cerrar modal">
+          &times;
+        </button>
         <div class="modal-grid">
           <div class="modal-visual">
             <div class="progress-bar-container">
               <div class="update-bar" id="update-bar"></div>
             </div>
             <div class="viewer-fallback-img-container">
-              <img id="modal-fallback-img" src="" alt="Vista previa del Producto">
+              <img
+                id="modal-fallback-img"
+                src=""
+                alt="Vista previa del Producto"
+              />
             </div>
             <div class="modal-3d-hint">Gira la prenda para ver detalles</div>
           </div>
@@ -303,62 +337,141 @@
               <span class="modal-price" id="modal-price">$0.00</span>
               <p class="modal-price-bs" id="modal-price-bs">0.00 BS</p>
             </div>
-            <p class="modal-description" id="modal-description">Descripción detallada de la confección y el textil usado en esta pieza.</p>
+            <p class="modal-description" id="modal-description">
+              Descripción detallada de la confección y el textil usado en esta
+              pieza.
+            </p>
             <div class="modal-specs" id="modal-specs-container"></div>
             <div class="modal-actions">
-              <button class="modal-btn-add-cart" id="modal-btn-add-cart">Añadir al Carrito</button>
-              <button class="modal-btn-inquire" id="modal-btn-inquire">Consultar Tallas</button>
+              <button class="modal-btn-add-cart" id="modal-btn-add-cart">
+                Añadir al Carrito
+              </button>
+              <button class="modal-btn-inquire" id="modal-btn-inquire">
+                Consultar Tallas
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <a href="https://api.whatsapp.com/send?phone=584226382165&text=Hola%20Avellvis%21%20Me%20gustar%C3%ADa%20recibir%20atenci%C3%B3n%20personalizada." 
-       target="_blank" 
-       class="whatsapp-floating-btn" 
-       aria-label="Contactar por WhatsApp">
+    <a
+      href="https://api.whatsapp.com/send?phone=584226382165&text=Hola%20Avellvis%21%20Me%20gustar%C3%ADa%20recibir%20atenci%C3%B3n%20personalizada."
+      target="_blank"
+      class="whatsapp-floating-btn"
+      aria-label="Contactar por WhatsApp"
+    >
       <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.963L2 22l5.233-1.373a9.946 9.946 0 0 0 4.773 1.219h.004c5.505 0 9.99-4.478 9.99-9.984 0-2.669-1.037-5.176-2.922-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.165c-.254.715-1.472 1.398-2.022 1.482-.497.076-1.147.141-3.331-.767-2.793-1.161-4.594-3.996-4.733-4.183-.14-.188-1.121-1.49-1.121-2.842 0-1.352.704-2.013.958-2.277.254-.264.55-.33.734-.33.184 0 .367.001.527.009.168.008.393-.064.615.464.226.541.776 1.894.842 2.027.066.132.11.288.022.464-.088.176-.132.288-.264.442-.132.154-.277.344-.396.463-.132.131-.271.274-.116.541.155.266.69.112 1.48.816.611.544 1.127.877 1.436 1.027.31.15.487.127.671-.083.183-.21.78-.908.988-1.217.207-.309.414-.26.698-.154.283.106 1.8.85 2.11 1.004.31.154.516.227.592.358.075.131.075.76-.179 1.475z"/>
+        <path
+          d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.963L2 22l5.233-1.373a9.946 9.946 0 0 0 4.773 1.219h.004c5.505 0 9.99-4.478 9.99-9.984 0-2.669-1.037-5.176-2.922-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.165c-.254.715-1.472 1.398-2.022 1.482-.497.076-1.147.141-3.331-.767-2.793-1.161-4.594-3.996-4.733-4.183-.14-.188-1.121-1.49-1.121-2.842 0-1.352.704-2.013.958-2.277.254-.264.55-.33.734-.33.184 0 .367.001.527.009.168.008.393-.064.615.464.226.541.776 1.894.842 2.027.066.132.11.288.022.464-.088.176-.132.288-.264.442-.132.154-.277.344-.396.463-.132.131-.271.274-.116.541.155.266.69.112 1.48.816.611.544 1.127.877 1.436 1.027.31.15.487.127.671-.083.183-.21.78-.908.988-1.217.207-.309.414-.26.698-.154.283.106 1.8.85 2.11 1.004.31.154.516.227.592.358.075.131.075.76-.179 1.475z"
+        />
       </svg>
     </a>
 
     <footer class="main-footer">
       <div class="footer-container">
         <div class="footer-brand-col">
-          <img src="img/logo.png" alt="Avellvis" class="footer-logo-img" style="max-height: 45px; width: auto; object-fit: contain; margin-bottom: 1rem;" />
-          <p class="footer-brand-desc">Moda exclusiva y confección premium con atención directa y personalizada.</p>
+          <img
+            src="img/logo.png"
+            alt="Avellvis"
+            class="footer-logo-img"
+            style="
+              max-height: 45px;
+              width: auto;
+              object-fit: contain;
+              margin-bottom: 1rem;
+            "
+          />
+          <p class="footer-brand-desc">
+            Moda exclusiva y confección premium con atención directa y
+            personalizada.
+          </p>
         </div>
         <div class="footer-social-col">
           <h4>Síguenos en nuestras redes</h4>
           <div class="footer-social-links">
-            <a href="https://api.whatsapp.com/send?phone=584226382165" target="_blank" class="social-icon-btn whatsapp-color" aria-label="WhatsApp">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 11.948.01c3.177.001 6.161 1.24 8.402 3.486 2.242 2.246 3.476 5.23 3.475 8.411-.004 6.557-5.342 11.894-11.893 11.894-2.015-.001-3.993-.513-5.744-1.487L0 24zm5.835-4.267c1.662.986 3.292 1.502 5.055 1.503 5.414 0 9.819-4.403 9.822-9.82.002-2.624-1.021-5.09-2.88-6.95C16 2.605 13.529 1.583 10.903 1.583c-5.418 0-9.823 4.406-9.826 9.823-.001 1.834.49 3.626 1.422 5.191l-.986 3.601 3.689-.967zm12.336-6.136c-.246-.123-1.454-.716-1.68-.798-.226-.082-.39-.123-.554.123-.164.246-.637.798-.78 1.56-.143.205-.286.246-.532.123-1.045-.523-1.728-.925-2.42-2.108-.184-.316.184-.294.527-.978.055-.11.027-.205-.014-.287-.04-.082-.39-.94-.534-1.285-.14-.339-.283-.293-.39-.298-.101-.005-.218-.006-.334-.006-.116 0-.307.043-.467.218-.16.175-.61.596-.61 1.455 0 .86.626 1.694.714 1.816.088.123 1.233 1.883 2.987 2.642.417.181.742.29 1.004.373.42.133.801.114 1.102.07.336-.05 1.454-.595 1.66-.17.205-.424.205-.788.143-.87-.061-.081-.225-.122-.471-.245z"/>
+            <a
+              href="https://api.whatsapp.com/send?phone=584226382165"
+              target="_blank"
+              class="social-icon-btn whatsapp-color"
+              aria-label="WhatsApp"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 11.948.01c3.177.001 6.161 1.24 8.402 3.486 2.242 2.246 3.476 5.23 3.475 8.411-.004 6.557-5.342 11.894-11.893 11.894-2.015-.001-3.993-.513-5.744-1.487L0 24zm5.835-4.267c1.662.986 3.292 1.502 5.055 1.503 5.414 0 9.819-4.403 9.822-9.82.002-2.624-1.021-5.09-2.88-6.95C16 2.605 13.529 1.583 10.903 1.583c-5.418 0-9.823 4.406-9.826 9.823-.001 1.834.49 3.626 1.422 5.191l-.986 3.601 3.689-.967zm12.336-6.136c-.246-.123-1.454-.716-1.68-.798-.226-.082-.39-.123-.554.123-.164.246-.637.798-.78 1.56-.143.205-.286.246-.532.123-1.045-.523-1.728-.925-2.42-2.108-.184-.316.184-.294.527-.978.055-.11.027-.205-.014-.287-.04-.082-.39-.94-.534-1.285-.14-.339-.283-.293-.39-.298-.101-.005-.218-.006-.334-.006-.116 0-.307.043-.467.218-.16.175-.61.596-.61 1.455 0 .86.626 1.694.714 1.816.088.123 1.233 1.883 2.987 2.642.417.181.742.29 1.004.373.42.133.801.114 1.102.07.336-.05 1.454-.595 1.66-.17.205-.424.205-.788.143-.87-.061-.081-.225-.122-.471-.245z"
+                />
               </svg>
             </a>
-            <a href="https://instagram.com/avellvis.collection" target="_blank" class="social-icon-btn instagram-color" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a
+              href="https://instagram.com/avellvis.collection"
+              target="_blank"
+              class="social-icon-btn instagram-color"
+              aria-label="Instagram"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="https://facebook.com/avellvis.collection" target="_blank" class="social-icon-btn facebook-color" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+            <a
+              href="https://facebook.com/avellvis.collection"
+              target="_blank"
+              class="social-icon-btn facebook-color"
+              aria-label="Facebook"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                />
               </svg>
             </a>
-            <a href="https://tiktok.com/@avellvis.collection" target="_blank" class="social-icon-btn tiktok-color" aria-label="TikTok">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.525.02c1.31.03 2.612.408 3.731 1.104.004.706.223 1.405.646 1.986.513.711 1.254 1.237 2.1 1.494v3.315c-.792-.093-1.573-.342-2.285-.733-.538-.297-1.014-.697-1.401-1.173v6.4c0 1.22-.32 2.413-.93 3.454-.61 1.04-1.51 1.86-2.59 2.365-1.08.506-2.29.65-3.46.417-1.17-.233-2.24-.833-3.07-1.72-.82-.89-1.35-2.02-1.5-3.21-.16-1.19.08-2.4.7-3.45.62-1.05 1.56-1.85 2.67-2.31 1.11-.47 2.33-.53 3.48-.19v3.4c-.58-.22-1.22-.22-1.8.01-.58.23-1.06.67-1.34 1.24-.29.56-.37 1.21-.23 1.83.14.61.51 1.15 1.04 1.51.53.36 1.17.49 1.8.36.63-.13 1.19-.51 1.57-1.07.38-.55.53-1.22.42-1.88V0h3.3z"/>
+            <a
+              href="https://tiktok.com/@avellvis.collection"
+              target="_blank"
+              class="social-icon-btn tiktok-color"
+              aria-label="TikTok"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12.525.02c1.31.03 2.612.408 3.731 1.104.004.706.223 1.405.646 1.986.513.711 1.254 1.237 2.1 1.494v3.315c-.792-.093-1.573-.342-2.285-.733-.538-.297-1.014-.697-1.401-1.173v6.4c0 1.22-.32 2.413-.93 3.454-.61 1.04-1.51 1.86-2.59 2.365-1.08.506-2.29.65-3.46.417-1.17-.233-2.24-.833-3.07-1.72-.82-.89-1.35-2.02-1.5-3.21-.16-1.19.08-2.4.7-3.45.62-1.05 1.56-1.85 2.67-2.31 1.11-.47 2.33-.53 3.48-.19v3.4c-.58-.22-1.22-.22-1.8.01-.58.23-1.06.67-1.34 1.24-.29.56-.37 1.21-.23 1.83.14.61.51 1.15 1.04 1.51.53.36 1.17.49 1.8.36.63-.13 1.19-.51 1.57-1.07.38-.55.53-1.22.42-1.88V0h3.3z"
+                />
               </svg>
             </a>
           </div>
         </div>
       </div>
       <div class="footer-divider"></div>
-      <p class="footer-copy">&copy; 2026 Avellvis. Todos los derechos reservados. Diseñado con elegancia.</p>
+      <p class="footer-copy">
+        &copy; 2026 Avellvis. Todos los derechos reservados. Diseñado con
+        elegancia.
+      </p>
     </footer>
 
     <script src="app.js"></script>
