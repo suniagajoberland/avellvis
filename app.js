@@ -52,8 +52,8 @@ const PRODUCTS = [
 ];
 
 // Configuración Operativa Global
-const BCV_RATE = 40.5;
-const WHATSAPP_NUMBER = "584226382165"; 
+const BCV_RATE = 603;
+const WHATSAPP_NUMBER = "584242714023"; 
 
 // Estado Reactivo de la Aplicación
 let cart = [];
