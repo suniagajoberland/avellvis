@@ -2,66 +2,52 @@
 const PRODUCTS = [
   {
     id: 1,
-    title: "CUADRADO MANGA LARGA",
+    title: "CUELLO CUADRADO MANGA LARGA",
     category: "body",
-    price: 38.99,
+    price: 10,
     image: "img/cuadrado-manga-larga.jpg",
-    description: "Body premium con entalle perfecto y acabados de lujo, ideal para looks casuales y formales.",
-    specs: { "Material": "Algodón Suede Premium", "Tallas": "S, M, L", "Cuidado": "Lavar a mano" }
   },
   {
     id: 2,
     title: "BICOLOR",
     category: "body",
-    price: 64.99,
+    price: 8,
     image: "img/bicolor.jpg",
-    description: "Diseño asimétrico bitono de alta costura que estiliza la silueta con elegancia contemporánea.",
-    specs: { "Material": "Lycra Coreana Confort", "Tallas": "S, M", "Cuidado": "No usar secadora" }
   },
   {
     id: 3,
-    title: "BODY BICOLOR",
+    title: "CUELLO REDONDO MANGA CORTA",
     category: "BODY",
-    price: 45.49,
+    price: 8,
     image: "img/cuello-redondo-mc.jpg",
-    description: "Variante exclusiva de nuestra línea bicolor con cuello estilizado y soporte interno mejorado.",
-    specs: { "Material": "Microfibra Premium", "Tallas": "M, L", "Cuidado": "Lavar al revés" }
   },
   {
     id: 4,
-    title: "CLASICO",
+    title: "CUELLO REDONDO MANGA LARGA",
     category: "BODY",
-    price: 45.49,
+    price: 10,
     image: "img/cuello-redondo-ml.jpg",
-    description: "El básico indispensable de fondo de armario. Confección ultrasuave transpirable de larga durabilidad.",
-    specs: { "Material": "Algodón Orgánico 100%", "Tallas": "S, M, L, XL", "Cuidado": "Lavar con agua fría" }
   },
   {
     id: 5,
-    title: "OLIMPICO",
+    title: "CUELLO REDONDO",
     category: "BODY",
-    price: 45.49,
+    price: 8,
     image: "img/cuello-redondo.jpg",
-    description: "Espalda atlética recortada con precisión milimétrica para un balance óptimo entre sensualidad y confort.",
-    specs: { "Material": "Spandex de Alta Densidad", "Tallas": "S, M", "Cuidado": "Secado a la sombra" }
   },
   {
     id: 6,
-    title: "REDONDO",
+    title: "FRANELILLA",
     category: "BODY",
-    price: 45.49,
+    price: 8,
     image: "img/franelilla.jpg",
-    description: "Escote redondo profundo acentuado con costuras invisibles que brindan soporte y minimalismo puro.",
-    specs: { "Material": "Nylon Soft Touch", "Tallas": "S, M, L", "Cuidado": "Usar jabón neutro" }
   },
   {
     id: 7,
-    title: "ELISA",
+    title: "OLIMPICO",
     category: "BODY",
-    price: 45.49,
+    price: 8,
     image: "img/olimpico.jpg",
-    description: "Detalles texturizados únicos en mangas con un corpiño estructurado de ajuste escultural.",
-    specs: { "Material": "Rib Elástico Importado", "Tallas": "M, L", "Cuidado": "Planchar a baja temperatura" }
   },
 ];
 
