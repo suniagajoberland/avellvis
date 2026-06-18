@@ -2,10 +2,10 @@
 const PRODUCTS = [
   {
     id: 1,
-    title: "ANDREA",
+    title: "CUADRADO MANGA LARGA",
     category: "body",
     price: 38.99,
-    image: "img/andrea.png",
+    image: "img/cuadrado-manga-larga.jpg",
     description: "Body premium con entalle perfecto y acabados de lujo, ideal para looks casuales y formales.",
     specs: { "Material": "Algodón Suede Premium", "Tallas": "S, M, L", "Cuidado": "Lavar a mano" }
   },
@@ -14,7 +14,7 @@ const PRODUCTS = [
     title: "BICOLOR",
     category: "body",
     price: 64.99,
-    image: "img/bicolor.png",
+    image: "img/bicolor.jpg",
     description: "Diseño asimétrico bitono de alta costura que estiliza la silueta con elegancia contemporánea.",
     specs: { "Material": "Lycra Coreana Confort", "Tallas": "S, M", "Cuidado": "No usar secadora" }
   },
@@ -23,7 +23,7 @@ const PRODUCTS = [
     title: "BODY BICOLOR",
     category: "BODY",
     price: 45.49,
-    image: "img/body bicolor.png",
+    image: "img/cuello-redondo-mc.jpg",
     description: "Variante exclusiva de nuestra línea bicolor con cuello estilizado y soporte interno mejorado.",
     specs: { "Material": "Microfibra Premium", "Tallas": "M, L", "Cuidado": "Lavar al revés" }
   },
@@ -32,7 +32,7 @@ const PRODUCTS = [
     title: "CLASICO",
     category: "BODY",
     price: 45.49,
-    image: "img/body clasico.png",
+    image: "img/cuello-redondo-ml.jpg",
     description: "El básico indispensable de fondo de armario. Confección ultrasuave transpirable de larga durabilidad.",
     specs: { "Material": "Algodón Orgánico 100%", "Tallas": "S, M, L, XL", "Cuidado": "Lavar con agua fría" }
   },
@@ -41,7 +41,7 @@ const PRODUCTS = [
     title: "OLIMPICO",
     category: "BODY",
     price: 45.49,
-    image: "img/body olimpico.png",
+    image: "img/cuello-redondo.jpg",
     description: "Espalda atlética recortada con precisión milimétrica para un balance óptimo entre sensualidad y confort.",
     specs: { "Material": "Spandex de Alta Densidad", "Tallas": "S, M", "Cuidado": "Secado a la sombra" }
   },
@@ -50,7 +50,7 @@ const PRODUCTS = [
     title: "REDONDO",
     category: "BODY",
     price: 45.49,
-    image: "img/body redondo.png",
+    image: "img/franelilla.jpg",
     description: "Escote redondo profundo acentuado con costuras invisibles que brindan soporte y minimalismo puro.",
     specs: { "Material": "Nylon Soft Touch", "Tallas": "S, M, L", "Cuidado": "Usar jabón neutro" }
   },
@@ -59,72 +59,9 @@ const PRODUCTS = [
     title: "ELISA",
     category: "BODY",
     price: 45.49,
-    image: "img/elisa.png",
+    image: "img/olimpico.jpg",
     description: "Detalles texturizados únicos en mangas con un corpiño estructurado de ajuste escultural.",
     specs: { "Material": "Rib Elástico Importado", "Tallas": "M, L", "Cuidado": "Planchar a baja temperatura" }
-  },
-  {
-    id: 8,
-    title: "FALDA",
-    category: "BODY",
-    price: 45.49,
-    image: "img/falda.png",
-    description: "Complemento perfecto de nuestra colección. Caída fluida impecable que define movimiento lineal.",
-    specs: { "Material": "Chifón Texturizado", "Tallas": "Única Ajustable", "Cuidado": "Lavar en seco" }
-  },
-  {
-    id: 9,
-    title: "FER",
-    category: "BODY",
-    price: 45.49,
-    image: "img/fer.png",
-    description: "Diseño vanguardista con sutiles aberturas laterales recortadas con tecnología láser.",
-    specs: { "Material": "Poliamida Confort", "Tallas": "S, M", "Cuidado": "No retorcer" }
-  },
-  {
-    id: 10,
-    title: "FRESA",
-    category: "SUETER",
-    price: 45.49,
-    image: "img/fresa sueter.png",
-    description: "Suéter tejido de punto suave en tonalidad vibrante de temporada. Máximo confort térmico.",
-    specs: { "Material": "Lana de Hilo Acrílico Premium", "Tallas": "S, M, L", "Cuidado": "Lavar a mano en agua fría" }
-  },
-  {
-    id: 11,
-    title: "IBONNI",
-    category: "SUETER",
-    price: 45.49,
-    image: "img/ibonni.png",
-    description: "Estructura oversize con cuello alto elegante y mangas abullonadas de estilo editorial sofisticado.",
-    specs: { "Material": "Algodón e Hilo Entrelazado", "Tallas": "M, L", "Cuidado": "Guardar doblado, no colgar" }
-  },
-  {
-    id: 12,
-    title: "OLIVIA",
-    category: "BODY",
-    price: 45.49,
-    image: "img/olivia.png",
-    description: "Líneas de encaje geométrico premium aplicadas sobre fondo sólido transpirable de alta compresión.",
-    specs: { "Material": "Encaje Francés y Lycra", "Tallas": "S, M, L", "Cuidado": "Usar bolsa de lavado" }
-  },
-  {
-    id: 13,
-    title: "RAYAS",
-    category: "FIT",
-    price: 45.49,
-    image: "img/rayas.png",
-    description: "Estampado lineal clásico de alta definición que estiliza ópticamente la postura de forma limpia.",
-    specs: { "Material": "Algodón Interlock", "Tallas": "S, M", "Cuidado": "No usar blanqueadores" }
-  },
-  {
-    id: 14,
-    title: "VICTORIA",
-    category: "BODY",
-    price: 45.49,
-    image: "img/victoria.png",
-    description: "Hombros descubiertos dramáticos sustentados con bandas de silicona internas antideslizantes.",
-    specs: { "Material": "Satén Elástico de Lujo", "Tallas": "S, M, L", "Cuidado": "Planchar al vapor" }
   },
 ];
 
@@ -271,14 +208,7 @@ function renderProducts() {
     card.innerHTML = `
       <div class="product-image-container">
         <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy">
-        <button class="btn-view-3d-overlay btn-action-view-details">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-            <path d="M2 12h20"></path>
-          </svg>
-          Ver Detalles Premium
-        </button>
+        
       </div>
       <div class="product-info">
         <span class="product-category">${product.category}</span>
