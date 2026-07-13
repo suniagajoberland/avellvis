@@ -123,7 +123,7 @@ img {
 
 .nav-links a {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-text-primary);
@@ -453,9 +453,9 @@ img {
 }
 
 .product-actions {
-  display: grid;
-  grid-template-columns: 2fr 1.2fr;
-  gap: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: auto;
 }
 
