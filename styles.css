@@ -3,8 +3,8 @@
 
 /* Variables de Diseño System */
 :root {
-  --color-bg-primary: #f9f6f0;
-  --color-bg-secondary: #efe5d9;
+  --color-bg-primary: #f4ebe3;
+  --color-bg-secondary: #d6bba5;
   --color-text-primary: #4a3525;
   --color-text-secondary: #745b49;
   --color-accent: #a36f52;
@@ -90,7 +90,7 @@ img {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--color-glass);
+  background-color: #d6bba5;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(45, 37, 34, 0.06);
@@ -480,7 +480,7 @@ img {
 
 .btn-inquire {
   border: 1.5px solid var(--color-text-primary);
-  color: var(--color-text-primary);
+  color: #a8654b;
   padding: 0.85rem 1rem;
   border-radius: var(--border-radius-sm);
   font-weight: 600;
@@ -546,8 +546,8 @@ img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(173, 82, 51, 0.1);
-  color: var(--color-accent);
+  background-color: #a8654b;
+  color: #d6bba5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,8 +583,8 @@ img {
 }
 
 .info-highlight {
-  background-color: rgba(173, 82, 51, 0.08);
-  color: var(--color-accent);
+  background-color: #a8654b;
+  color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-weight: 600;
