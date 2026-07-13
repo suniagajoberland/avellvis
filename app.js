@@ -5,49 +5,126 @@ const PRODUCTS = [
     title: "CUELLO CUADRADO MANGA LARGA",
     category: "body",
     price: 10,
-    image: "img/cuadrado-manga-larga.jpg",
+    image: "img/CUELLO CUADRADO MANGA LARGA.jpeg",
   },
   {
     id: 2,
     title: "BICOLOR",
     category: "body",
     price: 8,
-    image: "img/bicolor.jpg",
+    image: "img/BICOLOR.jpeg",
   },
   {
     id: 3,
     title: "CUELLO REDONDO MANGA CORTA",
     category: "BODY",
     price: 8,
-    image: "img/cuello-redondo-mc.jpg",
+    image: "img/CUELLO REDONDO MANGA CORTA.jpeg",
   },
   {
     id: 4,
     title: "CUELLO REDONDO MANGA LARGA",
     category: "BODY",
     price: 10,
-    image: "img/cuello-redondo-ml.jpg",
+    image: "img/CUELLO REDONDO MANGA LARGA.jpeg",
   },
   {
     id: 5,
     title: "CUELLO REDONDO",
     category: "BODY",
     price: 8,
-    image: "img/cuello-redondo.jpg",
+    image: "img/CUELLO REDONDO.jpeg",
   },
   {
     id: 6,
     title: "FRANELILLA",
     category: "BODY",
     price: 8,
-    image: "img/franelilla.jpg",
+    image: "img/FRANELILLA.jpeg",
   },
   {
     id: 7,
     title: "OLIMPICO",
     category: "BODY",
     price: 8,
-    image: "img/olimpico.jpg",
+    image: "img/OLIMPICO.jpeg",
+  },
+  {
+    id: 8,
+    title: "SHORTS",
+    category: "BIKER",
+    price: 12,
+    image: "img/biker.jpeg",
+  },
+  {
+    id: 9,
+    title: "FALDA SHORT",
+    category: "FALDA",
+    price: 12,
+    image: "img/FALDA SHORT.jpeg",
+  },
+  {
+    id: 10,
+    title: "BIKER",
+    category: "TOP",
+    price: 9,
+    image: "img/top.jpeg",
+  },
+  {
+    id: 11,
+    title: "LARGO",
+    category: "LEGGINS",
+    price: 12,
+    image: "img/leggins.jpeg",
+  },
+  {
+    id: 12,
+    title: "LARGO",
+    category: "SUDADERA",
+    price: 10.50,
+    image: "img/SUDADERA.jpeg",
+  },
+  {
+    id: 13,
+    title: "RUNNER",
+    category: "SHORT",
+    price: 12,
+    image: "img/RUNNER.jpeg",
+  },
+  {
+    id: 14,
+    title: "FALDA SHORT",
+    category: "VESTIDO",
+    price: 20,
+    image: "img/VESTIDO.jpeg",
+  },
+  {
+    id: 15,
+    title: "RECOVADA",
+    category: "FRANELILLA",
+    price: 9,
+    image: "img/HUESITO.jpeg",
+  },
+  {
+    id: 16,
+    title: "HUESITO",
+    category: "FRANELILLA",
+    price: 9,
+    image: "img/RECOBADA.jpeg",
+  },
+  {
+    id: 17,
+    title: "CRUZADO",
+    category: "CONJUNTO",
+    price: 20,
+    image: "img/CONJUNTO.jpeg",
+  },
+  {
+    id: 17,
+    title: "ESTAMPADO",
+    category: "TOP",
+    price: 9,
+    image: "img/ESTAMP.jpeg",
   },
 ];
 
@@ -199,10 +276,7 @@ function renderProducts() {
       <div class="product-info">
         <span class="product-category">${product.category}</span>
         <h3 class="product-title">${product.title}</h3>
-        <div class="product-price-row">
-          <span class="product-price">$${product.price.toFixed(2)}</span>
-          <span class="product-rate-bcv">Ref: ${priceBs} BS<br><small>Tasa BCV: ${BCV_RATE.toFixed(2)}</small></span>
-        </div>
+        
         <div class="product-actions">
           <button class="btn-add-cart btn-action-add">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
