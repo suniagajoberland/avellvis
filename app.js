@@ -5,7 +5,7 @@ const PRODUCTS = [
     title: "CUELLO CUADRADO MANGA LARGA",
     category: "body",
     price: 10,
-    image: "img/CUELLO CUADRADO MANGA LARGA.jpeg",
+    image: "img/CUELLO CUADRADO MANGA LARGA.jfif",
   },
   {
     id: 2,
@@ -81,7 +81,7 @@ const PRODUCTS = [
     id: 12,
     title: "LARGO",
     category: "SUDADERA",
-    price: 10.50,
+    price: 10.5,
     image: "img/SUDADERA.jpeg",
   },
   {
@@ -130,7 +130,7 @@ const PRODUCTS = [
 
 // Configuración Operativa Global
 const BCV_RATE = 603;
-const WHATSAPP_NUMBER = "584242714023"; 
+const WHATSAPP_NUMBER = "584242714023";
 
 // Estado Reactivo de la Aplicación
 let cart = [];
@@ -192,9 +192,15 @@ function setupEventListeners() {
       navLinks.classList.toggle("active");
       const spans = menuToggle.querySelectorAll("span");
       if (spans.length >= 3) {
-        spans[0].style.transform = navLinks.classList.contains("active") ? "rotate(45deg) translate(5px, 6px)" : "none";
-        spans[1].style.opacity = navLinks.classList.contains("active") ? "0" : "1";
-        spans[2].style.transform = navLinks.classList.contains("active") ? "rotate(-45deg) translate(5px, -6px)" : "none";
+        spans[0].style.transform = navLinks.classList.contains("active")
+          ? "rotate(45deg) translate(5px, 6px)"
+          : "none";
+        spans[1].style.opacity = navLinks.classList.contains("active")
+          ? "0"
+          : "1";
+        spans[2].style.transform = navLinks.classList.contains("active")
+          ? "rotate(-45deg) translate(5px, -6px)"
+          : "none";
       }
     });
 
@@ -224,7 +230,9 @@ function setupEventListeners() {
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      alert("¡Gracias por escribirnos! Tu mensaje ha sido procesado exitosamente.");
+      alert(
+        "¡Gracias por escribirnos! Tu mensaje ha sido procesado exitosamente.",
+      );
       contactForm.reset();
     });
   }
@@ -234,7 +242,7 @@ function setupEventListeners() {
     productsGrid.addEventListener("click", (e) => {
       const card = e.target.closest(".product-card");
       if (!card) return;
-      
+
       const productId = parseInt(card.getAttribute("data-id"), 10);
       if (!productId) return;
 
@@ -242,12 +250,12 @@ function setupEventListeners() {
       if (e.target.closest(".btn-action-add")) {
         addToCart(productId);
       }
-      
+
       // Evento para Consultar directamente por WhatsApp
       else if (e.target.closest(".btn-action-inquire")) {
         inquireProduct(productId);
       }
-      
+
       // Evento para Abrir el Lightbox modal de detalles
       else if (e.target.closest(".btn-action-view-details")) {
         open3DModal(productId);
@@ -304,7 +312,8 @@ function open3DModal(productId) {
   if (modalTitle) modalTitle.textContent = product.title;
   if (modalCategory) modalCategory.textContent = product.category;
   if (modalPrice) modalPrice.textContent = `$${product.price.toFixed(2)}`;
-  if (modalPriceBs) modalPriceBs.textContent = `Equivalente a ${priceBs} BS (Tasa BCV del día)`;
+  if (modalPriceBs)
+    modalPriceBs.textContent = `Equivalente a ${priceBs} BS (Tasa BCV del día)`;
   if (modalDescription) modalDescription.textContent = product.description;
   if (modalFallbackImg) modalFallbackImg.src = product.image;
 
@@ -444,7 +453,10 @@ function inquireProduct(productId) {
   if (!product) return;
 
   const text = `Hola Avellvis! Me interesa recibir asesoría personalizada sobre la prenda: *${product.title}* (%23${product.id}) en categoría ${product.category}. ¿Tienen disponibilidad de tallas actualmente?`;
-  window.open(`https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${text}`, "_blank");
+  window.open(
+    `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${text}`,
+    "_blank",
+  );
 }
 
 function checkoutCart() {
@@ -463,7 +475,10 @@ function checkoutCart() {
     message += `   Precio unitario: $${item.product.price.toFixed(2)}\n\n`;
   });
 
-  const subtotal = cart.reduce((acc, item) => acc + (item?.product?.price || 0) * item.quantity, 0);
+  const subtotal = cart.reduce(
+    (acc, item) => acc + (item?.product?.price || 0) * item.quantity,
+    0,
+  );
   const totalBs = subtotal * BCV_RATE;
 
   message += `==============================\n`;
@@ -497,7 +512,7 @@ function loadCartFromStorage() {
       const parsed = JSON.parse(storedCart);
       if (Array.isArray(parsed)) {
         // Filtramos para mantener únicamente items válidos que contengan la propiedad product
-        cart = parsed.filter(item => item && item.product);
+        cart = parsed.filter((item) => item && item.product);
       } else {
         cart = [];
       }
