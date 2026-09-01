@@ -5,7 +5,7 @@ const PRODUCTS = [
     title: "CUELLO CUADRADO MANGA LARGA",
     category: "body",
     price: 10,
-    image: "img/CUELLO CUADRADO MANGA LARGA.jfif",
+    image: "img/CUELLO CUADRADO MANGA LARGA.jpeg",
   },
   {
     id: 2,
